@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Main.Classes
 {
-    class GrainLoadPickup
+    public class GrainLoadPickup
     {
         public Guid id_grainload { get; set; }
         public Guid id_customer { get; set; }

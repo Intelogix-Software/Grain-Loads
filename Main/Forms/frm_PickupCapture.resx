@@ -135,6 +135,15 @@
   <data name="SDS_GrainType.ResultSchemaSerializable" xml:space="preserve">
     <value>PERhdGFTZXQgTmFtZT0iU0RTX0dyYWluVHlwZSI+PFZpZXcgTmFtZT0iTGlzdF9HcmFpbkxvYWRzR3JhaW5UeXBlcyI+PEZpZWxkIE5hbWU9IklEX0dyYWluVHlwZSIgVHlwZT0iR3VpZCIgLz48RmllbGQgTmFtZT0iR3JhaW5UeXBlIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkRlc2NyaXB0aW9uIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlN0YXR1cyIgVHlwZT0iQm9vbGVhbiIgLz48L1ZpZXc+PC9EYXRhU2V0Pg==</value>
   </data>
+  <metadata name="list_GlobalEntitiesBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>183, 155</value>
+  </metadata>
+  <metadata name="SDS_PickupLocations.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 155</value>
+  </metadata>
+  <data name="SDS_PickupLocations.ResultSchemaSerializable" xml:space="preserve">
+    <value>PERhdGFTZXQgTmFtZT0iU0RTX1BpY2t1cExvY2F0aW9ucyI+PFZpZXcgTmFtZT0iTGlzdF9HbG9iYWxFbnRpdGllcyI+PEZpZWxkIE5hbWU9IklEX0VudGl0eSIgVHlwZT0iR3VpZCIgLz48RmllbGQgTmFtZT0iQ29kZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJEZXNjcmlwdGlvbiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJMYXRpdHVkZSIgVHlwZT0iRG91YmxlIiAvPjxGaWVsZCBOYW1lPSJMb25naXR1ZGUiIFR5cGU9IkRvdWJsZSIgLz48RmllbGQgTmFtZT0iQ29vcmRzIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlVSTCIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJTdGF0dXMiIFR5cGU9IkJvb2xlYW4iIC8+PEZpZWxkIE5hbWU9IklEX0VudGl0eVR5cGUiIFR5cGU9Ikd1aWQiIC8+PEZpZWxkIE5hbWU9IklEX0NpdHkiIFR5cGU9Ikd1aWQiIC8+PC9WaWV3PjwvRGF0YVNldD4=</value>
+  </data>
   <metadata name="list_GrainLoadsCustomersBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 56</value>
   </metadata>
@@ -144,9 +153,6 @@
   <data name="SDS_Customers.ResultSchemaSerializable" xml:space="preserve">
     <value>PERhdGFTZXQgTmFtZT0iU0RTX0N1c3RvbWVycyI+PFZpZXcgTmFtZT0iTGlzdF9HcmFpbkxvYWRzQ3VzdG9tZXJzIj48RmllbGQgTmFtZT0iSURfR3JhaW5DdXN0b21lciIgVHlwZT0iR3VpZCIgLz48RmllbGQgTmFtZT0iQ3VzdG9tZXJOYW1lIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkN1c3RfIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlN0YXR1cyIgVHlwZT0iQm9vbGVhbiIgLz48L1ZpZXc+PC9EYXRhU2V0Pg==</value>
   </data>
-  <metadata name="sqlDataSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 155</value>
-  </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>257</value>
   </metadata>

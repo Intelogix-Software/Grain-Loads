@@ -95,6 +95,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SQL\Class1.cs" />
     <EmbeddedResource Include="Forms\frm_DeliveryCapt.resx">
       <DependentUpon>frm_DeliveryCapt.cs</DependentUpon>
     </EmbeddedResource>

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Main.Classes
 {
-    class GrainLoadDelivery
+    public class GrainLoadDelivery
     {
         public Guid id_grainload { get; set; }
         public DateTime delivery_date { get; set;}

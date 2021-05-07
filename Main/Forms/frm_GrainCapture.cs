@@ -31,7 +31,7 @@ namespace Main
             it.ShowDialog();
             if (it.DialogResult== DialogResult.OK)
             {
-                Console.WriteLine();
+                Console.WriteLine(it.newentry.id_customer.ToString());
             }
         }
     }

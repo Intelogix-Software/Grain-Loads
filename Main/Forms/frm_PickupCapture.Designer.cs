@@ -33,6 +33,7 @@ namespace Main.Forms
             DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery1 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_PickupCapture));
             DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery2 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery4 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery3 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
@@ -58,7 +59,8 @@ namespace Main.Forms
             this.edt_factura = new DevExpress.XtraEditors.TextEdit();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
-            this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
+            this.SDS_PickupLocations = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
+            this.list_GlobalEntitiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel1)).BeginInit();
             this.splitContainerControl1.Panel1.SuspendLayout();
@@ -85,6 +87,7 @@ namespace Main.Forms
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.list_GlobalEntitiesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainerControl1
@@ -273,7 +276,13 @@ namespace Main.Forms
             this.lue_locationPickup.Name = "lue_locationPickup";
             this.lue_locationPickup.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lue_locationPickup.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID_Entity", "ID_Entity", 54, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Description", "Description", 62, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
+            this.lue_locationPickup.Properties.DataSource = this.list_GlobalEntitiesBindingSource;
+            this.lue_locationPickup.Properties.DisplayMember = "Description";
             this.lue_locationPickup.Properties.NullText = "Pickup Location";
+            this.lue_locationPickup.Properties.ValueMember = "ID_Entity";
             this.lue_locationPickup.Size = new System.Drawing.Size(168, 20);
             this.lue_locationPickup.TabIndex = 7;
             // 
@@ -306,10 +315,10 @@ namespace Main.Forms
             // 
             this.SDS_Customers.ConnectionName = "_ITXLoadsTracking_Connection";
             this.SDS_Customers.Name = "SDS_Customers";
-            storedProcQuery3.Name = "List_GrainLoadsCustomers";
-            storedProcQuery3.StoredProcName = "List_GrainLoadsCustomers";
+            storedProcQuery4.Name = "List_GrainLoadsCustomers";
+            storedProcQuery4.StoredProcName = "List_GrainLoadsCustomers";
             this.SDS_Customers.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
-            storedProcQuery3});
+            storedProcQuery4});
             this.SDS_Customers.ResultSchemaSerializable = resources.GetString("SDS_Customers.ResultSchemaSerializable");
             // 
             // dte_Pickup
@@ -352,9 +361,20 @@ namespace Main.Forms
             this.pictureEdit1.TabIndex = 13;
             this.pictureEdit1.DoubleClick += new System.EventHandler(this.pictureEdit1_DoubleClick);
             // 
-            // sqlDataSource1
+            // SDS_PickupLocations
             // 
-            this.sqlDataSource1.Name = "sqlDataSource1";
+            this.SDS_PickupLocations.ConnectionName = "_ITXLoadsTracking_Connection";
+            this.SDS_PickupLocations.Name = "SDS_PickupLocations";
+            storedProcQuery3.Name = "List_GlobalEntities";
+            storedProcQuery3.StoredProcName = "List_GlobalEntities";
+            this.SDS_PickupLocations.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
+            storedProcQuery3});
+            this.SDS_PickupLocations.ResultSchemaSerializable = resources.GetString("SDS_PickupLocations.ResultSchemaSerializable");
+            // 
+            // list_GlobalEntitiesBindingSource
+            // 
+            this.list_GlobalEntitiesBindingSource.DataMember = "List_GlobalEntities";
+            this.list_GlobalEntitiesBindingSource.DataSource = this.SDS_PickupLocations;
             // 
             // frm_PickupCapture
             // 
@@ -390,6 +410,7 @@ namespace Main.Forms
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.list_GlobalEntitiesBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -420,6 +441,7 @@ namespace Main.Forms
         private DevExpress.DataAccess.Sql.SqlDataSource SDS_Customers;
         private System.Windows.Forms.BindingSource list_GrainLoadsGrainTypesBindingSource;
         private DevExpress.DataAccess.Sql.SqlDataSource SDS_GrainType;
-        private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
+        private DevExpress.DataAccess.Sql.SqlDataSource SDS_PickupLocations;
+        private System.Windows.Forms.BindingSource list_GlobalEntitiesBindingSource;
     }
 }
