@@ -32,7 +32,5 @@ namespace Main.GrainLoad
         public float TotalPrice { get; set; }
         public string Period { get; set; }
         public string Notes { get; set; }
-
-
     }
 }

@@ -17,10 +17,17 @@ namespace Main.Forms
         {
             InitializeComponent();
         }
-
         private void simpleButton2_Click(object sender, EventArgs e)
         {
 
+        }
+        private void frm_DeliveryCapt_Load(object sender, EventArgs e)
+        {
+            lbl_release.Text = edt_release.Text;
+            lbl_Factura.Text = edt_factura.Text;
+            lbl_driver.Text = lue_driver.Text;
+            lbl_Customer.Text = lue_customer.Text;
+            lbl_type.Text = lue_grainType.Text;
         }
     }
 }

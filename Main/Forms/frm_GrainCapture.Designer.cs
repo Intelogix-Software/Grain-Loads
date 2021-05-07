@@ -30,22 +30,26 @@ namespace Main
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery25 = new DevExpress.DataAccess.Sql.StoredProcQuery();
-            DevExpress.DataAccess.Sql.QueryParameter queryParameter19 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.QueryParameter queryParameter20 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.QueryParameter queryParameter21 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery1 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter1 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter2 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter3 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Grain_Capture));
-            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery26 = new DevExpress.DataAccess.Sql.StoredProcQuery();
-            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery27 = new DevExpress.DataAccess.Sql.StoredProcQuery();
-            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery28 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery2 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery3 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery4 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             this.SDS_gridGrainLoads = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.SDS_dateFilters = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
+            this.splitContainerControl2 = new DevExpress.XtraEditors.SplitContainerControl();
+            this.dateEdit2 = new DevExpress.XtraEditors.DateEdit();
+            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
+            this.lookUpEdit1 = new DevExpress.XtraEditors.LookUpEdit();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
-            this.list_GrainLoadsDriversBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.SDS_DriversList = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
-            this.list_GrainLoadsCustomersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.SDS_Customer = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
+            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colStatus = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -70,68 +74,64 @@ namespace Main
             this.colTotalPrice = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPeriod = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNotes = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
-            this.splitContainerControl2 = new DevExpress.XtraEditors.SplitContainerControl();
-            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
-            this.lookUpEdit1 = new DevExpress.XtraEditors.LookUpEdit();
-            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
-            this.dateEdit2 = new DevExpress.XtraEditors.DateEdit();
+            this.list_GrainLoadsDriversBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.SDS_DriversList = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
+            this.list_GrainLoadsCustomersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.SDS_Customer = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel1)).BeginInit();
             this.splitContainerControl1.Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel2)).BeginInit();
             this.splitContainerControl1.Panel2.SuspendLayout();
             this.splitContainerControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.list_GrainLoadsDriversBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.list_GrainLoadsCustomersBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2.Panel1)).BeginInit();
             this.splitContainerControl2.Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2.Panel2)).BeginInit();
             this.splitContainerControl2.Panel2.SuspendLayout();
             this.splitContainerControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.list_GrainLoadsDriversBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.list_GrainLoadsCustomersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // SDS_gridGrainLoads
             // 
             this.SDS_gridGrainLoads.ConnectionName = "_ICCManager_Connection";
             this.SDS_gridGrainLoads.Name = "SDS_gridGrainLoads";
-            storedProcQuery25.Name = "List_GrainLoads";
-            queryParameter19.Name = "@SDate";
-            queryParameter19.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter19.Value = new DevExpress.DataAccess.Expression("\'4/20/2021 12:00:00 AM\'", typeof(System.DateTime));
-            queryParameter20.Name = "@EDate";
-            queryParameter20.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter20.Value = new DevExpress.DataAccess.Expression("\'4/23/2021 12:00:00 AM\'", typeof(System.DateTime));
-            queryParameter21.Name = "@DateColumn";
-            queryParameter21.Type = typeof(string);
-            queryParameter21.ValueInfo = "Pickup_Date";
-            storedProcQuery25.Parameters.Add(queryParameter19);
-            storedProcQuery25.Parameters.Add(queryParameter20);
-            storedProcQuery25.Parameters.Add(queryParameter21);
-            storedProcQuery25.StoredProcName = "List_GrainLoads";
+            storedProcQuery1.Name = "List_GrainLoads";
+            queryParameter1.Name = "@SDate";
+            queryParameter1.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter1.Value = new DevExpress.DataAccess.Expression("\'4/20/2021 12:00:00 AM\'", typeof(System.DateTime));
+            queryParameter2.Name = "@EDate";
+            queryParameter2.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter2.Value = new DevExpress.DataAccess.Expression("\'4/23/2021 12:00:00 AM\'", typeof(System.DateTime));
+            queryParameter3.Name = "@DateColumn";
+            queryParameter3.Type = typeof(string);
+            queryParameter3.ValueInfo = "Pickup_Date";
+            storedProcQuery1.Parameters.Add(queryParameter1);
+            storedProcQuery1.Parameters.Add(queryParameter2);
+            storedProcQuery1.Parameters.Add(queryParameter3);
+            storedProcQuery1.StoredProcName = "List_GrainLoads";
             this.SDS_gridGrainLoads.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
-            storedProcQuery25});
+            storedProcQuery1});
             this.SDS_gridGrainLoads.ResultSchemaSerializable = resources.GetString("SDS_gridGrainLoads.ResultSchemaSerializable");
             // 
             // SDS_dateFilters
             // 
             this.SDS_dateFilters.ConnectionName = "_ICCManager_Connection";
             this.SDS_dateFilters.Name = "SDS_dateFilters";
-            storedProcQuery26.Name = "List_DateColumnsFromGrainLoads";
-            storedProcQuery26.StoredProcName = "List_DateColumnsFromGrainLoads";
+            storedProcQuery2.Name = "List_DateColumnsFromGrainLoads";
+            storedProcQuery2.StoredProcName = "List_DateColumnsFromGrainLoads";
             this.SDS_dateFilters.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
-            storedProcQuery26});
+            storedProcQuery2});
             this.SDS_dateFilters.ResultSchemaSerializable = resources.GetString("SDS_dateFilters.ResultSchemaSerializable");
             // 
             // splitContainerControl1
@@ -155,6 +155,78 @@ namespace Main
             this.splitContainerControl1.SplitterPosition = 161;
             this.splitContainerControl1.TabIndex = 1;
             // 
+            // splitContainerControl2
+            // 
+            this.splitContainerControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainerControl2.Location = new System.Drawing.Point(0, 0);
+            this.splitContainerControl2.Name = "splitContainerControl2";
+            // 
+            // splitContainerControl2.Panel1
+            // 
+            this.splitContainerControl2.Panel1.Controls.Add(this.dateEdit2);
+            this.splitContainerControl2.Panel1.Controls.Add(this.dateEdit1);
+            this.splitContainerControl2.Panel1.Controls.Add(this.lookUpEdit1);
+            this.splitContainerControl2.Panel1.Controls.Add(this.simpleButton1);
+            this.splitContainerControl2.Panel1.Controls.Add(this.simpleButton3);
+            this.splitContainerControl2.Panel1.Controls.Add(this.simpleButton4);
+            this.splitContainerControl2.Panel1.Controls.Add(this.simpleButton2);
+            this.splitContainerControl2.Panel1.Text = "Panel1";
+            // 
+            // splitContainerControl2.Panel2
+            // 
+            this.splitContainerControl2.Panel2.Controls.Add(this.pictureEdit1);
+            this.splitContainerControl2.Panel2.Text = "Panel2";
+            this.splitContainerControl2.Size = new System.Drawing.Size(935, 161);
+            this.splitContainerControl2.SplitterPosition = 574;
+            this.splitContainerControl2.TabIndex = 26;
+            // 
+            // dateEdit2
+            // 
+            this.dateEdit2.EditValue = null;
+            this.dateEdit2.Location = new System.Drawing.Point(278, 7);
+            this.dateEdit2.Name = "dateEdit2";
+            this.dateEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit2.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit2.Properties.NullText = "Top Date";
+            this.dateEdit2.Size = new System.Drawing.Size(130, 20);
+            this.dateEdit2.TabIndex = 28;
+            // 
+            // dateEdit1
+            // 
+            this.dateEdit1.EditValue = null;
+            this.dateEdit1.Location = new System.Drawing.Point(142, 7);
+            this.dateEdit1.Name = "dateEdit1";
+            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit1.Properties.NullText = "Low Date";
+            this.dateEdit1.Size = new System.Drawing.Size(130, 20);
+            this.dateEdit1.TabIndex = 27;
+            // 
+            // lookUpEdit1
+            // 
+            this.lookUpEdit1.Location = new System.Drawing.Point(6, 7);
+            this.lookUpEdit1.Name = "lookUpEdit1";
+            this.lookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookUpEdit1.Properties.NullText = "Date Filter";
+            this.lookUpEdit1.Properties.NullValuePrompt = "Date Filter";
+            this.lookUpEdit1.Size = new System.Drawing.Size(130, 20);
+            this.lookUpEdit1.TabIndex = 26;
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.simpleButton1.Location = new System.Drawing.Point(6, 33);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(130, 60);
+            this.simpleButton1.TabIndex = 23;
+            this.simpleButton1.Text = "Pickup";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
             // simpleButton3
             // 
             this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
@@ -164,35 +236,32 @@ namespace Main
             this.simpleButton3.TabIndex = 22;
             this.simpleButton3.Text = "simpleButton3";
             // 
-            // list_GrainLoadsDriversBindingSource
+            // simpleButton4
             // 
-            this.list_GrainLoadsDriversBindingSource.DataMember = "List_GrainLoadsDrivers";
-            this.list_GrainLoadsDriversBindingSource.DataSource = this.SDS_DriversList;
+            this.simpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
+            this.simpleButton4.Location = new System.Drawing.Point(278, 33);
+            this.simpleButton4.Name = "simpleButton4";
+            this.simpleButton4.Size = new System.Drawing.Size(130, 60);
+            this.simpleButton4.TabIndex = 25;
+            this.simpleButton4.Text = "Notes ";
             // 
-            // SDS_DriversList
+            // simpleButton2
             // 
-            this.SDS_DriversList.ConnectionName = "_ICCManager_Connection";
-            this.SDS_DriversList.Name = "SDS_DriversList";
-            storedProcQuery27.Name = "List_GrainLoadsDrivers";
-            storedProcQuery27.StoredProcName = "List_GrainLoadsDrivers";
-            this.SDS_DriversList.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
-            storedProcQuery27});
-            this.SDS_DriversList.ResultSchemaSerializable = resources.GetString("SDS_DriversList.ResultSchemaSerializable");
+            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.simpleButton2.Location = new System.Drawing.Point(142, 33);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(130, 60);
+            this.simpleButton2.TabIndex = 24;
+            this.simpleButton2.Text = "Delivery";
             // 
-            // list_GrainLoadsCustomersBindingSource
+            // pictureEdit1
             // 
-            this.list_GrainLoadsCustomersBindingSource.DataMember = "List_GrainLoadsCustomers";
-            this.list_GrainLoadsCustomersBindingSource.DataSource = this.SDS_Customer;
-            // 
-            // SDS_Customer
-            // 
-            this.SDS_Customer.ConnectionName = "_ICCManager_Connection";
-            this.SDS_Customer.Name = "SDS_Customer";
-            storedProcQuery28.Name = "List_GrainLoadsCustomers";
-            storedProcQuery28.StoredProcName = "List_GrainLoadsCustomers";
-            this.SDS_Customer.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
-            storedProcQuery28});
-            this.SDS_Customer.ResultSchemaSerializable = resources.GetString("SDS_Customer.ResultSchemaSerializable");
+            this.pictureEdit1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureEdit1.Location = new System.Drawing.Point(0, 0);
+            this.pictureEdit1.Name = "pictureEdit1";
+            this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit1.Size = new System.Drawing.Size(355, 161);
+            this.pictureEdit1.TabIndex = 14;
             // 
             // gridControl1
             // 
@@ -389,103 +458,35 @@ namespace Main
             this.colNotes.Visible = true;
             this.colNotes.VisibleIndex = 21;
             // 
-            // simpleButton1
+            // list_GrainLoadsDriversBindingSource
             // 
-            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(6, 33);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(130, 60);
-            this.simpleButton1.TabIndex = 23;
-            this.simpleButton1.Text = "Pickup";
+            this.list_GrainLoadsDriversBindingSource.DataMember = "List_GrainLoadsDrivers";
+            this.list_GrainLoadsDriversBindingSource.DataSource = this.SDS_DriversList;
             // 
-            // simpleButton2
+            // SDS_DriversList
             // 
-            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(142, 33);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(130, 60);
-            this.simpleButton2.TabIndex = 24;
-            this.simpleButton2.Text = "Delivery";
+            this.SDS_DriversList.ConnectionName = "_ICCManager_Connection";
+            this.SDS_DriversList.Name = "SDS_DriversList";
+            storedProcQuery3.Name = "List_GrainLoadsDrivers";
+            storedProcQuery3.StoredProcName = "List_GrainLoadsDrivers";
+            this.SDS_DriversList.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
+            storedProcQuery3});
+            this.SDS_DriversList.ResultSchemaSerializable = resources.GetString("SDS_DriversList.ResultSchemaSerializable");
             // 
-            // simpleButton4
+            // list_GrainLoadsCustomersBindingSource
             // 
-            this.simpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
-            this.simpleButton4.Location = new System.Drawing.Point(278, 33);
-            this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.Size = new System.Drawing.Size(130, 60);
-            this.simpleButton4.TabIndex = 25;
-            this.simpleButton4.Text = "Notes ";
+            this.list_GrainLoadsCustomersBindingSource.DataMember = "List_GrainLoadsCustomers";
+            this.list_GrainLoadsCustomersBindingSource.DataSource = this.SDS_Customer;
             // 
-            // splitContainerControl2
+            // SDS_Customer
             // 
-            this.splitContainerControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainerControl2.Location = new System.Drawing.Point(0, 0);
-            this.splitContainerControl2.Name = "splitContainerControl2";
-            // 
-            // splitContainerControl2.Panel1
-            // 
-            this.splitContainerControl2.Panel1.Controls.Add(this.dateEdit2);
-            this.splitContainerControl2.Panel1.Controls.Add(this.dateEdit1);
-            this.splitContainerControl2.Panel1.Controls.Add(this.lookUpEdit1);
-            this.splitContainerControl2.Panel1.Controls.Add(this.simpleButton1);
-            this.splitContainerControl2.Panel1.Controls.Add(this.simpleButton3);
-            this.splitContainerControl2.Panel1.Controls.Add(this.simpleButton4);
-            this.splitContainerControl2.Panel1.Controls.Add(this.simpleButton2);
-            this.splitContainerControl2.Panel1.Text = "Panel1";
-            // 
-            // splitContainerControl2.Panel2
-            // 
-            this.splitContainerControl2.Panel2.Controls.Add(this.pictureEdit1);
-            this.splitContainerControl2.Panel2.Text = "Panel2";
-            this.splitContainerControl2.Size = new System.Drawing.Size(935, 161);
-            this.splitContainerControl2.SplitterPosition = 574;
-            this.splitContainerControl2.TabIndex = 26;
-            // 
-            // pictureEdit1
-            // 
-            this.pictureEdit1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureEdit1.Location = new System.Drawing.Point(0, 0);
-            this.pictureEdit1.Name = "pictureEdit1";
-            this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit1.Size = new System.Drawing.Size(355, 161);
-            this.pictureEdit1.TabIndex = 14;
-            // 
-            // lookUpEdit1
-            // 
-            this.lookUpEdit1.Location = new System.Drawing.Point(6, 7);
-            this.lookUpEdit1.Name = "lookUpEdit1";
-            this.lookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit1.Properties.NullText = "Date Filter";
-            this.lookUpEdit1.Properties.NullValuePrompt = "Date Filter";
-            this.lookUpEdit1.Size = new System.Drawing.Size(130, 20);
-            this.lookUpEdit1.TabIndex = 26;
-            // 
-            // dateEdit1
-            // 
-            this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(142, 7);
-            this.dateEdit1.Name = "dateEdit1";
-            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.NullText = "Low Date";
-            this.dateEdit1.Size = new System.Drawing.Size(130, 20);
-            this.dateEdit1.TabIndex = 27;
-            // 
-            // dateEdit2
-            // 
-            this.dateEdit2.EditValue = null;
-            this.dateEdit2.Location = new System.Drawing.Point(278, 7);
-            this.dateEdit2.Name = "dateEdit2";
-            this.dateEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit2.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit2.Properties.NullText = "Top Date";
-            this.dateEdit2.Size = new System.Drawing.Size(130, 20);
-            this.dateEdit2.TabIndex = 28;
+            this.SDS_Customer.ConnectionName = "_ICCManager_Connection";
+            this.SDS_Customer.Name = "SDS_Customer";
+            storedProcQuery4.Name = "List_GrainLoadsCustomers";
+            storedProcQuery4.StoredProcName = "List_GrainLoadsCustomers";
+            this.SDS_Customer.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
+            storedProcQuery4});
+            this.SDS_Customer.ResultSchemaSerializable = resources.GetString("SDS_Customer.ResultSchemaSerializable");
             // 
             // Grain_Capture
             // 
@@ -501,22 +502,22 @@ namespace Main
             this.splitContainerControl1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
             this.splitContainerControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.list_GrainLoadsDriversBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.list_GrainLoadsCustomersBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2.Panel1)).EndInit();
             this.splitContainerControl2.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2.Panel2)).EndInit();
             this.splitContainerControl2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2)).EndInit();
             this.splitContainerControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.list_GrainLoadsDriversBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.list_GrainLoadsCustomersBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

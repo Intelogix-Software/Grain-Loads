@@ -117,16 +117,37 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="SDS_DriversList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="list_GrainLoadsDriversBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>18, 86</value>
+  </metadata>
+  <metadata name="SDS_Drivers.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="SDS_DriversList.ResultSchemaSerializable" xml:space="preserve">
-    <value>PERhdGFTZXQgTmFtZT0iU0RTX0RyaXZlcnNMaXN0Ij48VmlldyBOYW1lPSJMaXN0X0dyYWluTG9hZHNEcml2ZXJzIj48RmllbGQgTmFtZT0iSUREcml2ZXIiIFR5cGU9Ikd1aWQiIC8+PEZpZWxkIE5hbWU9IkRyaXZlciIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJOb3RlcyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJTdGF0dXMiIFR5cGU9IkJvb2xlYW4iIC8+PC9WaWV3PjwvRGF0YVNldD4=</value>
+  <data name="SDS_Drivers.ResultSchemaSerializable" xml:space="preserve">
+    <value>PERhdGFTZXQgTmFtZT0iU0RTX0RyaXZlcnMiPjxWaWV3IE5hbWU9Ikxpc3RfR3JhaW5Mb2Fkc0RyaXZlcnMiPjxGaWVsZCBOYW1lPSJJRF9Ecml2ZXIiIFR5cGU9Ikd1aWQiIC8+PEZpZWxkIE5hbWU9IkRyaXZlciIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJOb3RlcyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJTdGF0dXMiIFR5cGU9IkJvb2xlYW4iIC8+PC9WaWV3PjwvRGF0YVNldD4=</value>
   </data>
-  <metadata name="SDS_Customer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>445, 17</value>
+  <metadata name="list_GrainLoadsGrainTypesBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>18, 116</value>
   </metadata>
-  <data name="SDS_Customer.ResultSchemaSerializable" xml:space="preserve">
-    <value>PERhdGFTZXQgTmFtZT0iU0RTX0N1c3RvbWVyIj48VmlldyBOYW1lPSJMaXN0X0dyYWluTG9hZHNDdXN0b21lcnMiPjxGaWVsZCBOYW1lPSJJREN1c3RvbWVyIiBUeXBlPSJHdWlkIiAvPjxGaWVsZCBOYW1lPSJDdXN0b21lciIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJDdXN0XyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJTdGF0dXMiIFR5cGU9IkJvb2xlYW4iIC8+PC9WaWV3PjwvRGF0YVNldD4=</value>
+  <metadata name="SDS_GrainType.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>131, 21</value>
+  </metadata>
+  <data name="SDS_GrainType.ResultSchemaSerializable" xml:space="preserve">
+    <value>PERhdGFTZXQgTmFtZT0iU0RTX0dyYWluVHlwZSI+PFZpZXcgTmFtZT0iTGlzdF9HcmFpbkxvYWRzR3JhaW5UeXBlcyI+PEZpZWxkIE5hbWU9IklEX0dyYWluVHlwZSIgVHlwZT0iR3VpZCIgLz48RmllbGQgTmFtZT0iR3JhaW5UeXBlIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkRlc2NyaXB0aW9uIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlN0YXR1cyIgVHlwZT0iQm9vbGVhbiIgLz48L1ZpZXc+PC9EYXRhU2V0Pg==</value>
   </data>
+  <metadata name="list_GrainLoadsCustomersBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 56</value>
+  </metadata>
+  <metadata name="SDS_Customers.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>257, 23</value>
+  </metadata>
+  <data name="SDS_Customers.ResultSchemaSerializable" xml:space="preserve">
+    <value>PERhdGFTZXQgTmFtZT0iU0RTX0N1c3RvbWVycyI+PFZpZXcgTmFtZT0iTGlzdF9HcmFpbkxvYWRzQ3VzdG9tZXJzIj48RmllbGQgTmFtZT0iSURfR3JhaW5DdXN0b21lciIgVHlwZT0iR3VpZCIgLz48RmllbGQgTmFtZT0iQ3VzdG9tZXJOYW1lIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkN1c3RfIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlN0YXR1cyIgVHlwZT0iQm9vbGVhbiIgLz48L1ZpZXc+PC9EYXRhU2V0Pg==</value>
+  </data>
+  <metadata name="sqlDataSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 155</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>257</value>
+  </metadata>
 </root>

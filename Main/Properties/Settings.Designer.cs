@@ -13,13 +13,34 @@ namespace Main.Properties {
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.8.1.0")]
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+    public sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
         
         public static Settings Default {
             get {
                 return defaultInstance;
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Server= 35.223.136.179, 1433;Initial Catalog=ITXLoadsTRacking;Persist Security In" +
+            "\" +\r\n            \"fo=True;User ID=sqluser;Password=Int3logix20.-")]
+        public string SqlConQuery {
+            get {
+                return ((string)(this["SqlConQuery"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=35.223.136.179;Initial Catalog=ITXLoadsTracking;Persist Security Info" +
+            "=True;User ID=sqluser;Password=Int3logix20.-")]
+        public string ITXLoadsTracking {
+            get {
+                return ((string)(this["ITXLoadsTracking"]));
             }
         }
     }
