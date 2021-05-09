@@ -50,9 +50,15 @@ namespace Main.Forms
             newentry.gross_pickup = Convert.ToInt32( edt_grossPickup.Text);
             newentry.tare_pickup = Convert.ToInt32(edt_tarePickup.Text);
             newentry.neto_pickup = Convert.ToInt32(edt_netoPickup.Text);
+            newentry.regdate = DateTime.Now;
             this.DialogResult=DialogResult.OK;
             this.Close();
+        }
 
+        private void btn_CancelPickup_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
+            this.Close();
         }
     }
 }

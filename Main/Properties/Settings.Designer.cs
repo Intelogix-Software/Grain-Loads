@@ -26,7 +26,7 @@ namespace Main.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("Server= 35.223.136.179, 1433;Initial Catalog=ITXLoadsTRacking;Persist Security In" +
-            "\" +\r\n            \"fo=True;User ID=sqluser;Password=Int3logix20.-")]
+            "fo=True;User ID=sqluser;Password=Int3logix20.-")]
         public string SqlConQuery {
             get {
                 return ((string)(this["SqlConQuery"]));

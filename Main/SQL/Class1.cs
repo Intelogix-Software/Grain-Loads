@@ -58,5 +58,14 @@ namespace Main.SQL
                 }
             return dt;
         }
+        public DataTable sendDeliveryToSQL(GrainLoadPickup u)
+        {
+            DataTable dt = new DataTable();
+
+
+
+
+            return dt;
+        }
     }
 }

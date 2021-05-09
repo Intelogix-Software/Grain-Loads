@@ -35,23 +35,17 @@ namespace Main
             DevExpress.DataAccess.Sql.QueryParameter queryParameter2 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter3 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Grain_Capture));
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery2 = new DevExpress.DataAccess.Sql.StoredProcQuery();
-            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery3 = new DevExpress.DataAccess.Sql.StoredProcQuery();
-            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery4 = new DevExpress.DataAccess.Sql.StoredProcQuery();
-            this.SDS_gridGrainLoads = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
-            this.SDS_dateFilters = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
-            this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
-            this.splitContainerControl2 = new DevExpress.XtraEditors.SplitContainerControl();
-            this.dateEdit2 = new DevExpress.XtraEditors.DateEdit();
-            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
-            this.lookUpEdit1 = new DevExpress.XtraEditors.LookUpEdit();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.SDS_GrainLoadsGRID = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.DeleteColumn = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.colStatus = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colRelease = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colFactura = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -74,16 +68,22 @@ namespace Main
             this.colTotalPrice = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPeriod = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNotes = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.list_GrainLoadsDriversBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.SDS_DriversList = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
-            this.list_GrainLoadsCustomersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.SDS_Customer = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel1)).BeginInit();
-            this.splitContainerControl1.Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel2)).BeginInit();
-            this.splitContainerControl1.Panel2.SuspendLayout();
-            this.splitContainerControl1.SuspendLayout();
+            this.colID_GrainLoad = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.splitContainerControl2 = new DevExpress.XtraEditors.SplitContainerControl();
+            this.dateEdit2 = new DevExpress.XtraEditors.DateEdit();
+            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
+            this.lookUpEdit1 = new DevExpress.XtraEditors.LookUpEdit();
+            this.SDS_DateColumns = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
+            this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
+            this.list_GrainLoads_DateColumnsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2.Panel1)).BeginInit();
             this.splitContainerControl2.Panel1.SuspendLayout();
@@ -96,64 +96,281 @@ namespace Main
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.list_GrainLoadsDriversBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.list_GrainLoadsCustomersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel1)).BeginInit();
+            this.splitContainerControl1.Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel2)).BeginInit();
+            this.splitContainerControl1.Panel2.SuspendLayout();
+            this.splitContainerControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.list_GrainLoads_DateColumnsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // SDS_gridGrainLoads
+            // gridControl1
             // 
-            this.SDS_gridGrainLoads.ConnectionName = "_ICCManager_Connection";
-            this.SDS_gridGrainLoads.Name = "SDS_gridGrainLoads";
+            this.gridControl1.DataMember = "List_GrainLoads";
+            this.gridControl1.DataSource = this.SDS_GrainLoadsGRID;
+            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl1.Location = new System.Drawing.Point(0, 0);
+            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemButtonEdit1});
+            this.gridControl1.Size = new System.Drawing.Size(935, 601);
+            this.gridControl1.TabIndex = 0;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // SDS_GrainLoadsGRID
+            // 
+            this.SDS_GrainLoadsGRID.ConnectionName = "_ITXLoadsTracking_Connection";
+            this.SDS_GrainLoadsGRID.Name = "SDS_GrainLoadsGRID";
             storedProcQuery1.Name = "List_GrainLoads";
             queryParameter1.Name = "@SDate";
             queryParameter1.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter1.Value = new DevExpress.DataAccess.Expression("\'4/20/2021 12:00:00 AM\'", typeof(System.DateTime));
+            queryParameter1.Value = new DevExpress.DataAccess.Expression("TODAY()", typeof(System.DateTime));
             queryParameter2.Name = "@EDate";
             queryParameter2.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter2.Value = new DevExpress.DataAccess.Expression("\'4/23/2021 12:00:00 AM\'", typeof(System.DateTime));
+            queryParameter2.Value = new DevExpress.DataAccess.Expression("TODAY()", typeof(System.DateTime));
             queryParameter3.Name = "@DateColumn";
             queryParameter3.Type = typeof(string);
-            queryParameter3.ValueInfo = "Pickup_Date";
+            queryParameter3.ValueInfo = "_created_date";
             storedProcQuery1.Parameters.Add(queryParameter1);
             storedProcQuery1.Parameters.Add(queryParameter2);
             storedProcQuery1.Parameters.Add(queryParameter3);
             storedProcQuery1.StoredProcName = "List_GrainLoads";
-            this.SDS_gridGrainLoads.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
+            this.SDS_GrainLoadsGRID.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1});
-            this.SDS_gridGrainLoads.ResultSchemaSerializable = resources.GetString("SDS_gridGrainLoads.ResultSchemaSerializable");
+            this.SDS_GrainLoadsGRID.ResultSchemaSerializable = resources.GetString("SDS_GrainLoadsGRID.ResultSchemaSerializable");
             // 
-            // SDS_dateFilters
+            // gridView1
             // 
-            this.SDS_dateFilters.ConnectionName = "_ICCManager_Connection";
-            this.SDS_dateFilters.Name = "SDS_dateFilters";
-            storedProcQuery2.Name = "List_DateColumnsFromGrainLoads";
-            storedProcQuery2.StoredProcName = "List_DateColumnsFromGrainLoads";
-            this.SDS_dateFilters.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
-            storedProcQuery2});
-            this.SDS_dateFilters.ResultSchemaSerializable = resources.GetString("SDS_dateFilters.ResultSchemaSerializable");
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.DeleteColumn,
+            this.colStatus,
+            this.colRelease,
+            this.colFactura,
+            this.colPickup_Date,
+            this.colCustomer,
+            this.colPickup_Ticket,
+            this.colPickup_Location,
+            this.colGross_Pickup,
+            this.colTare_Pickup,
+            this.colNeto_Pickup,
+            this.colDelivery_Date,
+            this.colDelivery_Ticket,
+            this.colDelivery_Location,
+            this.colGross_Delivery,
+            this.colTare_Delivery,
+            this.colNeto_Delivery,
+            this.colWeight,
+            this.colType,
+            this.colDriverList,
+            this.colTotalPrice,
+            this.colPeriod,
+            this.colNotes,
+            this.colID_GrainLoad});
+            this.gridView1.CustomizationFormBounds = new System.Drawing.Rectangle(731, 676, 252, 227);
+            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.Name = "gridView1";
             // 
-            // splitContainerControl1
+            // DeleteColumn
             // 
-            this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainerControl1.Horizontal = false;
-            this.splitContainerControl1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainerControl1.Name = "splitContainerControl1";
+            this.DeleteColumn.Caption = "Delete";
+            this.DeleteColumn.ColumnEdit = this.repositoryItemButtonEdit1;
+            this.DeleteColumn.Name = "DeleteColumn";
+            this.DeleteColumn.Visible = true;
+            this.DeleteColumn.VisibleIndex = 0;
+            this.DeleteColumn.Width = 54;
             // 
-            // splitContainerControl1.Panel1
+            // repositoryItemButtonEdit1
             // 
-            this.splitContainerControl1.Panel1.Controls.Add(this.splitContainerControl2);
-            this.splitContainerControl1.Panel1.Text = "Panel1";
-            this.splitContainerControl1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainerControl1_Panel1_Paint);
+            this.repositoryItemButtonEdit1.AutoHeight = false;
+            this.repositoryItemButtonEdit1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
+            this.repositoryItemButtonEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
+            this.repositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.repositoryItemButtonEdit1.Click += new System.EventHandler(this.repositoryItemButtonEdit1_Click);
             // 
-            // splitContainerControl1.Panel2
+            // colStatus
             // 
-            this.splitContainerControl1.Panel2.Controls.Add(this.gridControl1);
-            this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(935, 768);
-            this.splitContainerControl1.SplitterPosition = 161;
-            this.splitContainerControl1.TabIndex = 1;
+            this.colStatus.FieldName = "Status";
+            this.colStatus.Name = "colStatus";
+            // 
+            // colRelease
+            // 
+            this.colRelease.FieldName = "Release";
+            this.colRelease.Name = "colRelease";
+            this.colRelease.Visible = true;
+            this.colRelease.VisibleIndex = 1;
+            this.colRelease.Width = 25;
+            // 
+            // colFactura
+            // 
+            this.colFactura.FieldName = "Factura";
+            this.colFactura.Name = "colFactura";
+            this.colFactura.Visible = true;
+            this.colFactura.VisibleIndex = 2;
+            this.colFactura.Width = 23;
+            // 
+            // colPickup_Date
+            // 
+            this.colPickup_Date.FieldName = "Pickup_Date";
+            this.colPickup_Date.Name = "colPickup_Date";
+            this.colPickup_Date.Visible = true;
+            this.colPickup_Date.VisibleIndex = 3;
+            this.colPickup_Date.Width = 34;
+            // 
+            // colCustomer
+            // 
+            this.colCustomer.FieldName = "Customer";
+            this.colCustomer.Name = "colCustomer";
+            this.colCustomer.Visible = true;
+            this.colCustomer.VisibleIndex = 4;
+            this.colCustomer.Width = 28;
+            // 
+            // colPickup_Ticket
+            // 
+            this.colPickup_Ticket.FieldName = "Pickup_Ticket";
+            this.colPickup_Ticket.Name = "colPickup_Ticket";
+            this.colPickup_Ticket.Visible = true;
+            this.colPickup_Ticket.VisibleIndex = 5;
+            this.colPickup_Ticket.Width = 35;
+            // 
+            // colPickup_Location
+            // 
+            this.colPickup_Location.FieldName = "Pickup_Location";
+            this.colPickup_Location.Name = "colPickup_Location";
+            this.colPickup_Location.Visible = true;
+            this.colPickup_Location.VisibleIndex = 6;
+            this.colPickup_Location.Width = 41;
+            // 
+            // colGross_Pickup
+            // 
+            this.colGross_Pickup.FieldName = "Gross_Pickup";
+            this.colGross_Pickup.Name = "colGross_Pickup";
+            this.colGross_Pickup.Visible = true;
+            this.colGross_Pickup.VisibleIndex = 7;
+            this.colGross_Pickup.Width = 31;
+            // 
+            // colTare_Pickup
+            // 
+            this.colTare_Pickup.FieldName = "Tare_Pickup";
+            this.colTare_Pickup.Name = "colTare_Pickup";
+            this.colTare_Pickup.Visible = true;
+            this.colTare_Pickup.VisibleIndex = 8;
+            this.colTare_Pickup.Width = 29;
+            // 
+            // colNeto_Pickup
+            // 
+            this.colNeto_Pickup.FieldName = "Neto_Pickup";
+            this.colNeto_Pickup.Name = "colNeto_Pickup";
+            this.colNeto_Pickup.Visible = true;
+            this.colNeto_Pickup.VisibleIndex = 9;
+            this.colNeto_Pickup.Width = 29;
+            // 
+            // colDelivery_Date
+            // 
+            this.colDelivery_Date.FieldName = "Delivery_Date";
+            this.colDelivery_Date.Name = "colDelivery_Date";
+            this.colDelivery_Date.Visible = true;
+            this.colDelivery_Date.VisibleIndex = 10;
+            this.colDelivery_Date.Width = 38;
+            // 
+            // colDelivery_Ticket
+            // 
+            this.colDelivery_Ticket.FieldName = "Delivery_Ticket";
+            this.colDelivery_Ticket.Name = "colDelivery_Ticket";
+            this.colDelivery_Ticket.Visible = true;
+            this.colDelivery_Ticket.VisibleIndex = 11;
+            this.colDelivery_Ticket.Width = 39;
+            // 
+            // colDelivery_Location
+            // 
+            this.colDelivery_Location.FieldName = "Delivery_Location";
+            this.colDelivery_Location.Name = "colDelivery_Location";
+            this.colDelivery_Location.Visible = true;
+            this.colDelivery_Location.VisibleIndex = 12;
+            this.colDelivery_Location.Width = 49;
+            // 
+            // colGross_Delivery
+            // 
+            this.colGross_Delivery.FieldName = "Gross_Delivery";
+            this.colGross_Delivery.Name = "colGross_Delivery";
+            this.colGross_Delivery.Visible = true;
+            this.colGross_Delivery.VisibleIndex = 13;
+            this.colGross_Delivery.Width = 40;
+            // 
+            // colTare_Delivery
+            // 
+            this.colTare_Delivery.FieldName = "Tare_Delivery";
+            this.colTare_Delivery.Name = "colTare_Delivery";
+            this.colTare_Delivery.Visible = true;
+            this.colTare_Delivery.VisibleIndex = 14;
+            this.colTare_Delivery.Width = 40;
+            // 
+            // colNeto_Delivery
+            // 
+            this.colNeto_Delivery.FieldName = "Neto_Delivery";
+            this.colNeto_Delivery.Name = "colNeto_Delivery";
+            this.colNeto_Delivery.Visible = true;
+            this.colNeto_Delivery.VisibleIndex = 15;
+            this.colNeto_Delivery.Width = 52;
+            // 
+            // colWeight
+            // 
+            this.colWeight.FieldName = "Weight";
+            this.colWeight.Name = "colWeight";
+            this.colWeight.Visible = true;
+            this.colWeight.VisibleIndex = 16;
+            this.colWeight.Width = 35;
+            // 
+            // colType
+            // 
+            this.colType.FieldName = "Type";
+            this.colType.Name = "colType";
+            this.colType.Visible = true;
+            this.colType.VisibleIndex = 17;
+            this.colType.Width = 46;
+            // 
+            // colDriverList
+            // 
+            this.colDriverList.FieldName = "DriverList";
+            this.colDriverList.Name = "colDriverList";
+            this.colDriverList.Visible = true;
+            this.colDriverList.VisibleIndex = 18;
+            this.colDriverList.Width = 55;
+            // 
+            // colTotalPrice
+            // 
+            this.colTotalPrice.FieldName = "TotalPrice";
+            this.colTotalPrice.Name = "colTotalPrice";
+            this.colTotalPrice.Visible = true;
+            this.colTotalPrice.VisibleIndex = 19;
+            this.colTotalPrice.Width = 64;
+            // 
+            // colPeriod
+            // 
+            this.colPeriod.FieldName = "Period";
+            this.colPeriod.Name = "colPeriod";
+            this.colPeriod.Visible = true;
+            this.colPeriod.VisibleIndex = 20;
+            this.colPeriod.Width = 50;
+            // 
+            // colNotes
+            // 
+            this.colNotes.FieldName = "Notes";
+            this.colNotes.Name = "colNotes";
+            this.colNotes.Visible = true;
+            this.colNotes.VisibleIndex = 21;
+            this.colNotes.Width = 77;
+            // 
+            // colID_GrainLoad
+            // 
+            this.colID_GrainLoad.FieldName = "ID_GrainLoad";
+            this.colID_GrainLoad.Name = "colID_GrainLoad";
+            this.colID_GrainLoad.Width = 20;
             // 
             // splitContainerControl2
             // 
@@ -212,10 +429,25 @@ namespace Main
             this.lookUpEdit1.Name = "lookUpEdit1";
             this.lookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookUpEdit1.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("column_name", "column_name", 74, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
+            this.lookUpEdit1.Properties.DataSource = this.SDS_DateColumns;
+            this.lookUpEdit1.Properties.DisplayMember = "column_name";
             this.lookUpEdit1.Properties.NullText = "Date Filter";
             this.lookUpEdit1.Properties.NullValuePrompt = "Date Filter";
+            this.lookUpEdit1.Properties.ValueMember = "column_name";
             this.lookUpEdit1.Size = new System.Drawing.Size(130, 20);
             this.lookUpEdit1.TabIndex = 26;
+            // 
+            // SDS_DateColumns
+            // 
+            this.SDS_DateColumns.ConnectionName = "_ITXLoadsTracking_Connection";
+            this.SDS_DateColumns.Name = "SDS_DateColumns";
+            storedProcQuery2.Name = "List_GrainLoads_DateColumns";
+            storedProcQuery2.StoredProcName = "List_GrainLoads_DateColumns";
+            this.SDS_DateColumns.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
+            storedProcQuery2});
+            this.SDS_DateColumns.ResultSchemaSerializable = resources.GetString("SDS_DateColumns.ResultSchemaSerializable");
             // 
             // simpleButton1
             // 
@@ -253,6 +485,7 @@ namespace Main
             this.simpleButton2.Size = new System.Drawing.Size(130, 60);
             this.simpleButton2.TabIndex = 24;
             this.simpleButton2.Text = "Delivery";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // pictureEdit1
             // 
@@ -263,230 +496,31 @@ namespace Main
             this.pictureEdit1.Size = new System.Drawing.Size(355, 161);
             this.pictureEdit1.TabIndex = 14;
             // 
-            // gridControl1
+            // splitContainerControl1
             // 
-            this.gridControl1.DataMember = "List_GrainLoads";
-            this.gridControl1.DataSource = this.SDS_gridGrainLoads;
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(0, 0);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(935, 601);
-            this.gridControl1.TabIndex = 0;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainerControl1.Horizontal = false;
+            this.splitContainerControl1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainerControl1.Name = "splitContainerControl1";
             // 
-            // gridView1
+            // splitContainerControl1.Panel1
             // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colStatus,
-            this.colRelease,
-            this.colFactura,
-            this.colPickup_Date,
-            this.colCustomer,
-            this.colPickup_Ticket,
-            this.colPickup_Location,
-            this.colGross_Pickup,
-            this.colTare_Pickup,
-            this.colNeto_Pickup,
-            this.colDelivery_Date,
-            this.colDelivery_Ticket,
-            this.colDelivery_Location,
-            this.colGross_Delivery,
-            this.colTare_Delivery,
-            this.colNeto_Delivery,
-            this.colWeight,
-            this.colType,
-            this.colDriverList,
-            this.colTotalPrice,
-            this.colPeriod,
-            this.colNotes});
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
+            this.splitContainerControl1.Panel1.Controls.Add(this.splitContainerControl2);
+            this.splitContainerControl1.Panel1.Text = "Panel1";
+            this.splitContainerControl1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainerControl1_Panel1_Paint);
             // 
-            // colStatus
+            // splitContainerControl1.Panel2
             // 
-            this.colStatus.FieldName = "Status";
-            this.colStatus.Name = "colStatus";
-            this.colStatus.Visible = true;
-            this.colStatus.VisibleIndex = 0;
+            this.splitContainerControl1.Panel2.Controls.Add(this.gridControl1);
+            this.splitContainerControl1.Panel2.Text = "Panel2";
+            this.splitContainerControl1.Size = new System.Drawing.Size(935, 768);
+            this.splitContainerControl1.SplitterPosition = 161;
+            this.splitContainerControl1.TabIndex = 1;
             // 
-            // colRelease
+            // list_GrainLoads_DateColumnsBindingSource
             // 
-            this.colRelease.FieldName = "Release";
-            this.colRelease.Name = "colRelease";
-            this.colRelease.Visible = true;
-            this.colRelease.VisibleIndex = 1;
-            // 
-            // colFactura
-            // 
-            this.colFactura.FieldName = "Factura";
-            this.colFactura.Name = "colFactura";
-            this.colFactura.Visible = true;
-            this.colFactura.VisibleIndex = 2;
-            // 
-            // colPickup_Date
-            // 
-            this.colPickup_Date.FieldName = "Pickup_Date";
-            this.colPickup_Date.Name = "colPickup_Date";
-            this.colPickup_Date.Visible = true;
-            this.colPickup_Date.VisibleIndex = 3;
-            // 
-            // colCustomer
-            // 
-            this.colCustomer.FieldName = "Customer";
-            this.colCustomer.Name = "colCustomer";
-            this.colCustomer.Visible = true;
-            this.colCustomer.VisibleIndex = 4;
-            // 
-            // colPickup_Ticket
-            // 
-            this.colPickup_Ticket.FieldName = "Pickup_Ticket";
-            this.colPickup_Ticket.Name = "colPickup_Ticket";
-            this.colPickup_Ticket.Visible = true;
-            this.colPickup_Ticket.VisibleIndex = 5;
-            // 
-            // colPickup_Location
-            // 
-            this.colPickup_Location.FieldName = "Pickup_Location";
-            this.colPickup_Location.Name = "colPickup_Location";
-            this.colPickup_Location.Visible = true;
-            this.colPickup_Location.VisibleIndex = 6;
-            // 
-            // colGross_Pickup
-            // 
-            this.colGross_Pickup.FieldName = "Gross_Pickup";
-            this.colGross_Pickup.Name = "colGross_Pickup";
-            this.colGross_Pickup.Visible = true;
-            this.colGross_Pickup.VisibleIndex = 7;
-            // 
-            // colTare_Pickup
-            // 
-            this.colTare_Pickup.FieldName = "Tare_Pickup";
-            this.colTare_Pickup.Name = "colTare_Pickup";
-            this.colTare_Pickup.Visible = true;
-            this.colTare_Pickup.VisibleIndex = 8;
-            // 
-            // colNeto_Pickup
-            // 
-            this.colNeto_Pickup.FieldName = "Neto_Pickup";
-            this.colNeto_Pickup.Name = "colNeto_Pickup";
-            this.colNeto_Pickup.Visible = true;
-            this.colNeto_Pickup.VisibleIndex = 9;
-            // 
-            // colDelivery_Date
-            // 
-            this.colDelivery_Date.FieldName = "Delivery_Date";
-            this.colDelivery_Date.Name = "colDelivery_Date";
-            this.colDelivery_Date.Visible = true;
-            this.colDelivery_Date.VisibleIndex = 10;
-            // 
-            // colDelivery_Ticket
-            // 
-            this.colDelivery_Ticket.FieldName = "Delivery_Ticket";
-            this.colDelivery_Ticket.Name = "colDelivery_Ticket";
-            this.colDelivery_Ticket.Visible = true;
-            this.colDelivery_Ticket.VisibleIndex = 11;
-            // 
-            // colDelivery_Location
-            // 
-            this.colDelivery_Location.FieldName = "Delivery_Location";
-            this.colDelivery_Location.Name = "colDelivery_Location";
-            this.colDelivery_Location.Visible = true;
-            this.colDelivery_Location.VisibleIndex = 12;
-            // 
-            // colGross_Delivery
-            // 
-            this.colGross_Delivery.FieldName = "Gross_Delivery";
-            this.colGross_Delivery.Name = "colGross_Delivery";
-            this.colGross_Delivery.Visible = true;
-            this.colGross_Delivery.VisibleIndex = 13;
-            // 
-            // colTare_Delivery
-            // 
-            this.colTare_Delivery.FieldName = "Tare_Delivery";
-            this.colTare_Delivery.Name = "colTare_Delivery";
-            this.colTare_Delivery.Visible = true;
-            this.colTare_Delivery.VisibleIndex = 14;
-            // 
-            // colNeto_Delivery
-            // 
-            this.colNeto_Delivery.FieldName = "Neto_Delivery";
-            this.colNeto_Delivery.Name = "colNeto_Delivery";
-            this.colNeto_Delivery.Visible = true;
-            this.colNeto_Delivery.VisibleIndex = 15;
-            // 
-            // colWeight
-            // 
-            this.colWeight.FieldName = "Weight";
-            this.colWeight.Name = "colWeight";
-            this.colWeight.Visible = true;
-            this.colWeight.VisibleIndex = 16;
-            // 
-            // colType
-            // 
-            this.colType.FieldName = "Type";
-            this.colType.Name = "colType";
-            this.colType.Visible = true;
-            this.colType.VisibleIndex = 17;
-            // 
-            // colDriverList
-            // 
-            this.colDriverList.FieldName = "DriverList";
-            this.colDriverList.Name = "colDriverList";
-            this.colDriverList.Visible = true;
-            this.colDriverList.VisibleIndex = 18;
-            // 
-            // colTotalPrice
-            // 
-            this.colTotalPrice.FieldName = "TotalPrice";
-            this.colTotalPrice.Name = "colTotalPrice";
-            this.colTotalPrice.Visible = true;
-            this.colTotalPrice.VisibleIndex = 19;
-            // 
-            // colPeriod
-            // 
-            this.colPeriod.FieldName = "Period";
-            this.colPeriod.Name = "colPeriod";
-            this.colPeriod.Visible = true;
-            this.colPeriod.VisibleIndex = 20;
-            // 
-            // colNotes
-            // 
-            this.colNotes.FieldName = "Notes";
-            this.colNotes.Name = "colNotes";
-            this.colNotes.Visible = true;
-            this.colNotes.VisibleIndex = 21;
-            // 
-            // list_GrainLoadsDriversBindingSource
-            // 
-            this.list_GrainLoadsDriversBindingSource.DataMember = "List_GrainLoadsDrivers";
-            this.list_GrainLoadsDriversBindingSource.DataSource = this.SDS_DriversList;
-            // 
-            // SDS_DriversList
-            // 
-            this.SDS_DriversList.ConnectionName = "_ICCManager_Connection";
-            this.SDS_DriversList.Name = "SDS_DriversList";
-            storedProcQuery3.Name = "List_GrainLoadsDrivers";
-            storedProcQuery3.StoredProcName = "List_GrainLoadsDrivers";
-            this.SDS_DriversList.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
-            storedProcQuery3});
-            this.SDS_DriversList.ResultSchemaSerializable = resources.GetString("SDS_DriversList.ResultSchemaSerializable");
-            // 
-            // list_GrainLoadsCustomersBindingSource
-            // 
-            this.list_GrainLoadsCustomersBindingSource.DataMember = "List_GrainLoadsCustomers";
-            this.list_GrainLoadsCustomersBindingSource.DataSource = this.SDS_Customer;
-            // 
-            // SDS_Customer
-            // 
-            this.SDS_Customer.ConnectionName = "_ICCManager_Connection";
-            this.SDS_Customer.Name = "SDS_Customer";
-            storedProcQuery4.Name = "List_GrainLoadsCustomers";
-            storedProcQuery4.StoredProcName = "List_GrainLoadsCustomers";
-            this.SDS_Customer.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
-            storedProcQuery4});
-            this.SDS_Customer.ResultSchemaSerializable = resources.GetString("SDS_Customer.ResultSchemaSerializable");
+            this.list_GrainLoads_DateColumnsBindingSource.DataMember = "List_GrainLoads_DateColumns";
+            this.list_GrainLoads_DateColumnsBindingSource.DataSource = this.SDS_DateColumns;
             // 
             // Grain_Capture
             // 
@@ -496,12 +530,9 @@ namespace Main
             this.Controls.Add(this.splitContainerControl1);
             this.Name = "Grain_Capture";
             this.Text = "Grain_Capture";
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel1)).EndInit();
-            this.splitContainerControl1.Panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel2)).EndInit();
-            this.splitContainerControl1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
-            this.splitContainerControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2.Panel1)).EndInit();
             this.splitContainerControl2.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2.Panel2)).EndInit();
@@ -514,19 +545,19 @@ namespace Main
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.list_GrainLoadsDriversBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.list_GrainLoadsCustomersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel1)).EndInit();
+            this.splitContainerControl1.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel2)).EndInit();
+            this.splitContainerControl1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
+            this.splitContainerControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.list_GrainLoads_DateColumnsBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private DevExpress.XtraEditors.SplitContainerControl splitContainerControl1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton3;
-        private DevExpress.DataAccess.Sql.SqlDataSource SDS_dateFilters;
-        private DevExpress.DataAccess.Sql.SqlDataSource SDS_gridGrainLoads;
+
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn colStatus;
@@ -551,17 +582,21 @@ namespace Main
         private DevExpress.XtraGrid.Columns.GridColumn colTotalPrice;
         private DevExpress.XtraGrid.Columns.GridColumn colPeriod;
         private DevExpress.XtraGrid.Columns.GridColumn colNotes;
-        private DevExpress.DataAccess.Sql.SqlDataSource SDS_Customer;
-        private DevExpress.DataAccess.Sql.SqlDataSource SDS_DriversList;
-        private System.Windows.Forms.BindingSource list_GrainLoadsDriversBindingSource;
-        private System.Windows.Forms.BindingSource list_GrainLoadsCustomersBindingSource;
-        private DevExpress.XtraEditors.SimpleButton simpleButton4;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.SplitContainerControl splitContainerControl2;
-        private DevExpress.XtraEditors.PictureEdit pictureEdit1;
         private DevExpress.XtraEditors.DateEdit dateEdit2;
         private DevExpress.XtraEditors.DateEdit dateEdit1;
         private DevExpress.XtraEditors.LookUpEdit lookUpEdit1;
+        private System.Windows.Forms.BindingSource list_GrainLoads_DateColumnsBindingSource;
+        private DevExpress.DataAccess.Sql.SqlDataSource SDS_DateColumns;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton simpleButton3;
+        private DevExpress.XtraEditors.SimpleButton simpleButton4;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.PictureEdit pictureEdit1;
+        private DevExpress.XtraEditors.SplitContainerControl splitContainerControl1;
+        private DevExpress.DataAccess.Sql.SqlDataSource SDS_GrainLoadsGRID;
+        private DevExpress.XtraGrid.Columns.GridColumn DeleteColumn;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit1;
+        private DevExpress.XtraGrid.Columns.GridColumn colID_GrainLoad;
     }
 }

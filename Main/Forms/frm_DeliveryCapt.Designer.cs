@@ -148,7 +148,8 @@ namespace Main.Forms
             this.btn_SavePickup.Name = "btn_SavePickup";
             this.btn_SavePickup.Size = new System.Drawing.Size(168, 50);
             this.btn_SavePickup.TabIndex = 25;
-            this.btn_SavePickup.Text = "simpleButton3";
+            this.btn_SavePickup.Text = "Save";
+            this.btn_SavePickup.Click += new System.EventHandler(this.btn_SavePickup_Click);
             // 
             // btn_CancelPickup
             // 
@@ -156,7 +157,7 @@ namespace Main.Forms
             this.btn_CancelPickup.Name = "btn_CancelPickup";
             this.btn_CancelPickup.Size = new System.Drawing.Size(168, 30);
             this.btn_CancelPickup.TabIndex = 24;
-            this.btn_CancelPickup.Text = "simpleButton1";
+            this.btn_CancelPickup.Text = "Cancel";
             // 
             // textEdit1
             // 
