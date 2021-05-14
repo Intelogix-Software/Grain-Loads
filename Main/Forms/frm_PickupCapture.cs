@@ -9,12 +9,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace Main.Forms
 {
     public partial class frm_PickupCapture : DevExpress.XtraEditors.XtraForm
     {
         public GrainLoadPickup newentry { get; set;}
+       
         public frm_PickupCapture()
         {
             InitializeComponent();
@@ -59,6 +59,11 @@ namespace Main.Forms
         {
             this.DialogResult = DialogResult.Cancel;
             this.Close();
+        }
+
+        private void frm_PickupCapture_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

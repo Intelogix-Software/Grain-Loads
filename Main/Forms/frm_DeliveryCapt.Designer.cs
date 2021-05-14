@@ -29,15 +29,16 @@ namespace Main.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_DeliveryCapt));
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
-            this.edt_release = new DevExpress.XtraEditors.PanelControl();
+            this.pnl_Pickup = new DevExpress.XtraEditors.PanelControl();
             this.btn_SavePickup = new DevExpress.XtraEditors.SimpleButton();
             this.btn_CancelPickup = new DevExpress.XtraEditors.SimpleButton();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.edt_release = new DevExpress.XtraEditors.TextEdit();
             this.btn_pickupDropbox = new DevExpress.XtraEditors.SimpleButton();
             this.lue_driver = new DevExpress.XtraEditors.LookUpEdit();
-            this.lue_grainType = new DevExpress.XtraEditors.LookUpEdit();
-            this.textEdit7 = new DevExpress.XtraEditors.TextEdit();
+            this.lue_GrainType = new DevExpress.XtraEditors.LookUpEdit();
+            this.edt_pickupticket = new DevExpress.XtraEditors.TextEdit();
             this.edt_netoPickup = new DevExpress.XtraEditors.TextEdit();
             this.edt_tarePickup = new DevExpress.XtraEditors.TextEdit();
             this.edt_grossPickup = new DevExpress.XtraEditors.TextEdit();
@@ -68,12 +69,12 @@ namespace Main.Forms
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel2)).BeginInit();
             this.splitContainerControl1.Panel2.SuspendLayout();
             this.splitContainerControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.edt_release)).BeginInit();
-            this.edt_release.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pnl_Pickup)).BeginInit();
+            this.pnl_Pickup.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.edt_release.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lue_driver.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lue_grainType.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lue_GrainType.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.edt_pickupticket.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.edt_netoPickup.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.edt_tarePickup.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.edt_grossPickup.Properties)).BeginInit();
@@ -109,7 +110,7 @@ namespace Main.Forms
             // 
             // splitContainerControl1.Panel1
             // 
-            this.splitContainerControl1.Panel1.Controls.Add(this.edt_release);
+            this.splitContainerControl1.Panel1.Controls.Add(this.pnl_Pickup);
             this.splitContainerControl1.Panel1.Text = "Panel1";
             // 
             // splitContainerControl1.Panel2
@@ -120,30 +121,31 @@ namespace Main.Forms
             this.splitContainerControl1.SplitterPosition = 218;
             this.splitContainerControl1.TabIndex = 0;
             // 
-            // edt_release
+            // pnl_Pickup
             // 
-            this.edt_release.Controls.Add(this.btn_SavePickup);
-            this.edt_release.Controls.Add(this.btn_CancelPickup);
-            this.edt_release.Controls.Add(this.textEdit1);
-            this.edt_release.Controls.Add(this.btn_pickupDropbox);
-            this.edt_release.Controls.Add(this.lue_driver);
-            this.edt_release.Controls.Add(this.lue_grainType);
-            this.edt_release.Controls.Add(this.textEdit7);
-            this.edt_release.Controls.Add(this.edt_netoPickup);
-            this.edt_release.Controls.Add(this.edt_tarePickup);
-            this.edt_release.Controls.Add(this.edt_grossPickup);
-            this.edt_release.Controls.Add(this.lue_locationPickup);
-            this.edt_release.Controls.Add(this.lue_customer);
-            this.edt_release.Controls.Add(this.dte_Pickup);
-            this.edt_release.Controls.Add(this.edt_factura);
-            this.edt_release.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.edt_release.Location = new System.Drawing.Point(0, 0);
-            this.edt_release.Name = "edt_release";
-            this.edt_release.Size = new System.Drawing.Size(218, 448);
-            this.edt_release.TabIndex = 1;
+            this.pnl_Pickup.Controls.Add(this.btn_SavePickup);
+            this.pnl_Pickup.Controls.Add(this.btn_CancelPickup);
+            this.pnl_Pickup.Controls.Add(this.edt_release);
+            this.pnl_Pickup.Controls.Add(this.btn_pickupDropbox);
+            this.pnl_Pickup.Controls.Add(this.lue_driver);
+            this.pnl_Pickup.Controls.Add(this.lue_GrainType);
+            this.pnl_Pickup.Controls.Add(this.edt_pickupticket);
+            this.pnl_Pickup.Controls.Add(this.edt_netoPickup);
+            this.pnl_Pickup.Controls.Add(this.edt_tarePickup);
+            this.pnl_Pickup.Controls.Add(this.edt_grossPickup);
+            this.pnl_Pickup.Controls.Add(this.lue_locationPickup);
+            this.pnl_Pickup.Controls.Add(this.lue_customer);
+            this.pnl_Pickup.Controls.Add(this.dte_Pickup);
+            this.pnl_Pickup.Controls.Add(this.edt_factura);
+            this.pnl_Pickup.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnl_Pickup.Location = new System.Drawing.Point(0, 0);
+            this.pnl_Pickup.Name = "pnl_Pickup";
+            this.pnl_Pickup.Size = new System.Drawing.Size(218, 448);
+            this.pnl_Pickup.TabIndex = 1;
             // 
             // btn_SavePickup
             // 
+            this.btn_SavePickup.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_SavePickup.ImageOptions.Image")));
             this.btn_SavePickup.Location = new System.Drawing.Point(28, 340);
             this.btn_SavePickup.Name = "btn_SavePickup";
             this.btn_SavePickup.Size = new System.Drawing.Size(168, 50);
@@ -153,26 +155,28 @@ namespace Main.Forms
             // 
             // btn_CancelPickup
             // 
+            this.btn_CancelPickup.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_CancelPickup.ImageOptions.Image")));
             this.btn_CancelPickup.Location = new System.Drawing.Point(28, 396);
             this.btn_CancelPickup.Name = "btn_CancelPickup";
             this.btn_CancelPickup.Size = new System.Drawing.Size(168, 30);
             this.btn_CancelPickup.TabIndex = 24;
             this.btn_CancelPickup.Text = "Cancel";
             // 
-            // textEdit1
+            // edt_release
             // 
-            this.textEdit1.Enabled = false;
-            this.textEdit1.Location = new System.Drawing.Point(28, 10);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.NullText = "Release";
-            this.textEdit1.Properties.NullValuePrompt = "Release";
-            this.textEdit1.Properties.ShowNullValuePrompt = ((DevExpress.XtraEditors.ShowNullValuePromptOptions)(((DevExpress.XtraEditors.ShowNullValuePromptOptions.EmptyValue | DevExpress.XtraEditors.ShowNullValuePromptOptions.EditorFocused) 
+            this.edt_release.Enabled = false;
+            this.edt_release.Location = new System.Drawing.Point(28, 10);
+            this.edt_release.Name = "edt_release";
+            this.edt_release.Properties.NullText = "Release";
+            this.edt_release.Properties.NullValuePrompt = "Release";
+            this.edt_release.Properties.ShowNullValuePrompt = ((DevExpress.XtraEditors.ShowNullValuePromptOptions)(((DevExpress.XtraEditors.ShowNullValuePromptOptions.EmptyValue | DevExpress.XtraEditors.ShowNullValuePromptOptions.EditorFocused) 
             | DevExpress.XtraEditors.ShowNullValuePromptOptions.EditorReadOnly)));
-            this.textEdit1.Size = new System.Drawing.Size(168, 20);
-            this.textEdit1.TabIndex = 1;
+            this.edt_release.Size = new System.Drawing.Size(168, 20);
+            this.edt_release.TabIndex = 1;
             // 
             // btn_pickupDropbox
             // 
+            this.btn_pickupDropbox.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_pickupDropbox.ImageOptions.Image")));
             this.btn_pickupDropbox.Location = new System.Drawing.Point(28, 296);
             this.btn_pickupDropbox.Name = "btn_pickupDropbox";
             this.btn_pickupDropbox.Size = new System.Drawing.Size(168, 38);
@@ -192,25 +196,25 @@ namespace Main.Forms
             this.lue_driver.Size = new System.Drawing.Size(168, 20);
             this.lue_driver.TabIndex = 3;
             // 
-            // lue_grainType
+            // lue_GrainType
             // 
-            this.lue_grainType.Enabled = false;
-            this.lue_grainType.Location = new System.Drawing.Point(28, 192);
-            this.lue_grainType.Name = "lue_grainType";
-            this.lue_grainType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.lue_GrainType.Enabled = false;
+            this.lue_GrainType.Location = new System.Drawing.Point(28, 192);
+            this.lue_GrainType.Name = "lue_GrainType";
+            this.lue_GrainType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lue_grainType.Properties.NullText = "GrainType";
-            this.lue_grainType.Size = new System.Drawing.Size(168, 20);
-            this.lue_grainType.TabIndex = 8;
+            this.lue_GrainType.Properties.NullText = "GrainType";
+            this.lue_GrainType.Size = new System.Drawing.Size(168, 20);
+            this.lue_GrainType.TabIndex = 8;
             // 
-            // textEdit7
+            // edt_pickupticket
             // 
-            this.textEdit7.Enabled = false;
-            this.textEdit7.Location = new System.Drawing.Point(28, 140);
-            this.textEdit7.Name = "textEdit7";
-            this.textEdit7.Properties.NullText = "Pickup Ticket";
-            this.textEdit7.Size = new System.Drawing.Size(168, 20);
-            this.textEdit7.TabIndex = 6;
+            this.edt_pickupticket.Enabled = false;
+            this.edt_pickupticket.Location = new System.Drawing.Point(28, 140);
+            this.edt_pickupticket.Name = "edt_pickupticket";
+            this.edt_pickupticket.Properties.NullText = "Pickup Ticket";
+            this.edt_pickupticket.Size = new System.Drawing.Size(168, 20);
+            this.edt_pickupticket.TabIndex = 6;
             // 
             // edt_netoPickup
             // 
@@ -369,6 +373,7 @@ namespace Main.Forms
             // 
             // simpleButton2
             // 
+            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
             this.simpleButton2.Location = new System.Drawing.Point(23, 352);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(176, 38);
@@ -472,12 +477,12 @@ namespace Main.Forms
             this.splitContainerControl1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
             this.splitContainerControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.edt_release)).EndInit();
-            this.edt_release.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pnl_Pickup)).EndInit();
+            this.pnl_Pickup.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.edt_release.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lue_driver.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lue_grainType.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lue_GrainType.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.edt_pickupticket.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.edt_netoPickup.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.edt_tarePickup.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.edt_grossPickup.Properties)).EndInit();
@@ -523,12 +528,12 @@ namespace Main.Forms
         private DevExpress.XtraEditors.TextEdit edt_totalPrice;
         private DevExpress.XtraEditors.PictureEdit pictureEdit2;
         private DevExpress.XtraEditors.PictureEdit pictureEdit1;
-        private DevExpress.XtraEditors.PanelControl edt_release;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.PanelControl pnl_Pickup;
+        private DevExpress.XtraEditors.TextEdit edt_release;
         private DevExpress.XtraEditors.SimpleButton btn_pickupDropbox;
         private DevExpress.XtraEditors.LookUpEdit lue_driver;
-        private DevExpress.XtraEditors.LookUpEdit lue_grainType;
-        private DevExpress.XtraEditors.TextEdit textEdit7;
+        private DevExpress.XtraEditors.LookUpEdit lue_GrainType;
+        private DevExpress.XtraEditors.TextEdit edt_pickupticket;
         private DevExpress.XtraEditors.TextEdit edt_netoPickup;
         private DevExpress.XtraEditors.TextEdit edt_tarePickup;
         private DevExpress.XtraEditors.TextEdit edt_grossPickup;

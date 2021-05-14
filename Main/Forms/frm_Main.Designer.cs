@@ -48,21 +48,17 @@ namespace Main
             this.skinBarSubItem2 = new DevExpress.XtraBars.SkinBarSubItem();
             this.skinDropDownButtonItem1 = new DevExpress.XtraBars.SkinDropDownButtonItem();
             this.skinPaletteDropDownButtonItem1 = new DevExpress.XtraBars.SkinPaletteDropDownButtonItem();
-            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.pnl_conteiner = new DevExpress.XtraEditors.PanelControl();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.pnl_control = new DevExpress.XtraEditors.PanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.toolbarFormManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
-            this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pnl_conteiner)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pnl_control)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -97,15 +93,15 @@ namespace Main
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(1012, 0);
+            this.barDockControlTop.Size = new System.Drawing.Size(858, 0);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 762);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 650);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1012, 22);
+            this.barDockControlBottom.Size = new System.Drawing.Size(858, 22);
             // 
             // barDockControlLeft
             // 
@@ -113,15 +109,15 @@ namespace Main
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 762);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 650);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1012, 0);
+            this.barDockControlRight.Location = new System.Drawing.Point(858, 0);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 762);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 650);
             // 
             // skinBarSubItem1
             // 
@@ -150,15 +146,15 @@ namespace Main
             this.barDockControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControl1.Location = new System.Drawing.Point(0, 0);
             this.barDockControl1.Manager = this.toolbarFormManager1;
-            this.barDockControl1.Size = new System.Drawing.Size(1012, 0);
+            this.barDockControl1.Size = new System.Drawing.Size(858, 0);
             // 
             // barDockControl2
             // 
             this.barDockControl2.CausesValidation = false;
             this.barDockControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControl2.Location = new System.Drawing.Point(0, 784);
+            this.barDockControl2.Location = new System.Drawing.Point(0, 672);
             this.barDockControl2.Manager = this.toolbarFormManager1;
-            this.barDockControl2.Size = new System.Drawing.Size(1012, 0);
+            this.barDockControl2.Size = new System.Drawing.Size(858, 0);
             // 
             // barDockControl3
             // 
@@ -166,15 +162,15 @@ namespace Main
             this.barDockControl3.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControl3.Location = new System.Drawing.Point(0, 0);
             this.barDockControl3.Manager = this.toolbarFormManager1;
-            this.barDockControl3.Size = new System.Drawing.Size(0, 784);
+            this.barDockControl3.Size = new System.Drawing.Size(0, 672);
             // 
             // barDockControl4
             // 
             this.barDockControl4.CausesValidation = false;
             this.barDockControl4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControl4.Location = new System.Drawing.Point(1012, 0);
+            this.barDockControl4.Location = new System.Drawing.Point(858, 0);
             this.barDockControl4.Manager = this.toolbarFormManager1;
-            this.barDockControl4.Size = new System.Drawing.Size(0, 784);
+            this.barDockControl4.Size = new System.Drawing.Size(0, 672);
             // 
             // barSubItem1
             // 
@@ -208,23 +204,6 @@ namespace Main
             this.skinPaletteDropDownButtonItem1.Id = 4;
             this.skinPaletteDropDownButtonItem1.Name = "skinPaletteDropDownButtonItem1";
             // 
-            // panelControl1
-            // 
-            this.panelControl1.Controls.Add(this.pnl_conteiner);
-            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl1.Location = new System.Drawing.Point(0, 148);
-            this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1012, 587);
-            this.panelControl1.TabIndex = 6;
-            // 
-            // pnl_conteiner
-            // 
-            this.pnl_conteiner.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_conteiner.Location = new System.Drawing.Point(2, 2);
-            this.pnl_conteiner.Name = "pnl_conteiner";
-            this.pnl_conteiner.Size = new System.Drawing.Size(1008, 583);
-            this.pnl_conteiner.TabIndex = 0;
-            // 
             // ribbonControl1
             // 
             this.ribbonControl1.ExpandCollapseItem.Id = 0;
@@ -237,7 +216,7 @@ namespace Main
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
-            this.ribbonControl1.Size = new System.Drawing.Size(1012, 148);
+            this.ribbonControl1.Size = new System.Drawing.Size(858, 148);
             this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
             // 
             // barButtonItem1
@@ -252,8 +231,7 @@ namespace Main
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup1,
-            this.ribbonPageGroup2});
+            this.ribbonPageGroup1});
             this.ribbonPage1.Name = "ribbonPage1";
             this.ribbonPage1.Text = "GrainLoads Capture";
             // 
@@ -263,29 +241,33 @@ namespace Main
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "ribbonPageGroup1";
             // 
-            // ribbonPageGroup2
-            // 
-            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
-            this.ribbonPageGroup2.Text = "ribbonPageGroup2";
-            // 
             // ribbonStatusBar1
             // 
-            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 735);
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 623);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbonControl1;
-            this.ribbonStatusBar1.Size = new System.Drawing.Size(1012, 27);
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(858, 27);
             // 
             // ribbonPage2
             // 
             this.ribbonPage2.Name = "ribbonPage2";
             this.ribbonPage2.Text = "ribbonPage2";
             // 
+            // pnl_control
+            // 
+            this.pnl_control.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnl_control.Location = new System.Drawing.Point(0, 148);
+            this.pnl_control.Name = "pnl_control";
+            this.pnl_control.Size = new System.Drawing.Size(858, 475);
+            this.pnl_control.TabIndex = 10;
+            this.pnl_control.SizeChanged += new System.EventHandler(this.pnl_control_SizeChanged);
+            // 
             // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1012, 784);
-            this.Controls.Add(this.panelControl1);
+            this.ClientSize = new System.Drawing.Size(858, 672);
+            this.Controls.Add(this.pnl_control);
             this.Controls.Add(this.ribbonControl1);
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.barDockControlLeft);
@@ -302,10 +284,8 @@ namespace Main
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.toolbarFormManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
-            this.panelControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pnl_conteiner)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pnl_control)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -320,7 +300,6 @@ namespace Main
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraBars.SkinBarSubItem skinBarSubItem1;
-        private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraBars.ToolbarForm.ToolbarFormManager toolbarFormManager1;
         private DevExpress.XtraBars.BarDockControl barDockControl1;
         private DevExpress.XtraBars.BarDockControl barDockControl2;
@@ -336,9 +315,8 @@ namespace Main
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar1;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
-        private DevExpress.XtraEditors.PanelControl pnl_conteiner;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraEditors.PanelControl pnl_control;
     }
 }
 
