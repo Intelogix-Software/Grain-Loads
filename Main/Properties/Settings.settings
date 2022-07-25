@@ -12,5 +12,8 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=35.223.136.179;Initial Catalog=ITXLoadsTracking;Persist Security Info=True;User ID=sqluser;Password=Int3logix20.-</Value>
     </Setting>
+    <Setting Name="Id_who" Type="System.String" Scope="User">
+      <Value Profile="(Default)">4F30F63A-9ECC-4E19-B81A-6C63BC4EF25F</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

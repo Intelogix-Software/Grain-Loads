@@ -43,5 +43,17 @@ namespace Main.Properties {
                 return ((string)(this["ITXLoadsTracking"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("4F30F63A-9ECC-4E19-B81A-6C63BC4EF25F")]
+        public string Id_who {
+            get {
+                return ((string)(this["Id_who"]));
+            }
+            set {
+                this["Id_who"] = value;
+            }
+        }
     }
 }

@@ -61,6 +61,8 @@ namespace Main.Forms
             this.edt_factura = new DevExpress.XtraEditors.TextEdit();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
+            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::Main.Forms.WaitForm2), true, true);
+            this.list_GlobalEntitiesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel1)).BeginInit();
             this.splitContainerControl1.Panel1.SuspendLayout();
@@ -88,6 +90,7 @@ namespace Main.Forms
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.list_GlobalEntitiesBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainerControl1
@@ -173,6 +176,7 @@ namespace Main.Forms
             this.btn_pickupDropbox.Size = new System.Drawing.Size(168, 38);
             this.btn_pickupDropbox.TabIndex = 12;
             this.btn_pickupDropbox.Text = "Upload Pickup Photo";
+            this.btn_pickupDropbox.Click += new System.EventHandler(this.btn_pickupDropbox_Click);
             // 
             // lue_driver
             // 
@@ -291,10 +295,10 @@ namespace Main.Forms
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ZIPCode", "ZIP Code", 53, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("City", "City", 28, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("State", "State", 35, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
-            this.lue_locationPickup.Properties.DataSource = this.list_GlobalEntitiesBindingSource;
+            this.lue_locationPickup.Properties.DataSource = this.list_GlobalEntitiesBindingSource1;
             this.lue_locationPickup.Properties.DisplayMember = "Description";
             this.lue_locationPickup.Properties.NullText = "Pickup Location";
-            this.lue_locationPickup.Properties.ValueMember = "ID_Entity";
+            this.lue_locationPickup.Properties.ValueMember = "ID_Location";
             this.lue_locationPickup.Size = new System.Drawing.Size(168, 20);
             this.lue_locationPickup.TabIndex = 7;
             // 
@@ -391,6 +395,15 @@ namespace Main.Forms
             this.pictureEdit1.TabIndex = 13;
             this.pictureEdit1.DoubleClick += new System.EventHandler(this.pictureEdit1_DoubleClick);
             // 
+            // splashScreenManager1
+            // 
+            this.splashScreenManager1.ClosingDelay = 500;
+            // 
+            // list_GlobalEntitiesBindingSource1
+            // 
+            this.list_GlobalEntitiesBindingSource1.DataMember = "List_GlobalEntities";
+            this.list_GlobalEntitiesBindingSource1.DataSource = this.SDS_PickupLocations;
+            // 
             // frm_PickupCapture
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -427,6 +440,7 @@ namespace Main.Forms
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.list_GlobalEntitiesBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -459,5 +473,7 @@ namespace Main.Forms
         private DevExpress.DataAccess.Sql.SqlDataSource SDS_GrainType;
         private DevExpress.DataAccess.Sql.SqlDataSource SDS_PickupLocations;
         private System.Windows.Forms.BindingSource list_GlobalEntitiesBindingSource;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
+        private System.Windows.Forms.BindingSource list_GlobalEntitiesBindingSource1;
     }
 }

@@ -29,21 +29,34 @@ namespace Main.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_DeliveryCapt));
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery9 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery10 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery11 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery12 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.pnl_Pickup = new DevExpress.XtraEditors.PanelControl();
-            this.btn_SavePickup = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_SaveDelivery = new DevExpress.XtraEditors.SimpleButton();
             this.btn_CancelPickup = new DevExpress.XtraEditors.SimpleButton();
             this.edt_release = new DevExpress.XtraEditors.TextEdit();
             this.btn_pickupDropbox = new DevExpress.XtraEditors.SimpleButton();
             this.lue_driver = new DevExpress.XtraEditors.LookUpEdit();
+            this.list_GrainLoadsDriversBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.SDS_Drivers = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.lue_GrainType = new DevExpress.XtraEditors.LookUpEdit();
+            this.list_GrainLoadsGrainTypesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.SDS_GrainType = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.edt_pickupticket = new DevExpress.XtraEditors.TextEdit();
             this.edt_netoPickup = new DevExpress.XtraEditors.TextEdit();
             this.edt_tarePickup = new DevExpress.XtraEditors.TextEdit();
             this.edt_grossPickup = new DevExpress.XtraEditors.TextEdit();
             this.lue_locationPickup = new DevExpress.XtraEditors.LookUpEdit();
+            this.list_GlobalEntitiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.SDS_PickupLocations = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.lue_customer = new DevExpress.XtraEditors.LookUpEdit();
+            this.list_GrainLoadsCustomersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.SDS_Customers = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.dte_Pickup = new DevExpress.XtraEditors.DateEdit();
             this.edt_factura = new DevExpress.XtraEditors.TextEdit();
             this.splitContainerControl3 = new DevExpress.XtraEditors.SplitContainerControl();
@@ -58,11 +71,13 @@ namespace Main.Forms
             this.edt_netoDelivery = new DevExpress.XtraEditors.TextEdit();
             this.edt_tareDelivery = new DevExpress.XtraEditors.TextEdit();
             this.edt_grossDelivery = new DevExpress.XtraEditors.TextEdit();
-            this.lookUpEdit1 = new DevExpress.XtraEditors.LookUpEdit();
-            this.textEdit8 = new DevExpress.XtraEditors.TextEdit();
-            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
+            this.lue_deliveryLocation = new DevExpress.XtraEditors.LookUpEdit();
+            this.list_GlobalEntitiesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.edt_DeliveryTicket = new DevExpress.XtraEditors.TextEdit();
+            this.dedt_DeliveryDate = new DevExpress.XtraEditors.DateEdit();
             this.pictureEdit2 = new DevExpress.XtraEditors.PictureEdit();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
+            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::Main.Forms.WaitForm2), true, true);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel1)).BeginInit();
             this.splitContainerControl1.Panel1.SuspendLayout();
@@ -73,13 +88,17 @@ namespace Main.Forms
             this.pnl_Pickup.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.edt_release.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lue_driver.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.list_GrainLoadsDriversBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lue_GrainType.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.list_GrainLoadsGrainTypesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.edt_pickupticket.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.edt_netoPickup.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.edt_tarePickup.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.edt_grossPickup.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lue_locationPickup.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.list_GlobalEntitiesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lue_customer.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.list_GrainLoadsCustomersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dte_Pickup.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dte_Pickup.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.edt_factura.Properties)).BeginInit();
@@ -94,10 +113,11 @@ namespace Main.Forms
             ((System.ComponentModel.ISupportInitialize)(this.edt_netoDelivery.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.edt_tareDelivery.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.edt_grossDelivery.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lue_deliveryLocation.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.list_GlobalEntitiesBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.edt_DeliveryTicket.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dedt_DeliveryDate.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dedt_DeliveryDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             this.SuspendLayout();
@@ -123,7 +143,7 @@ namespace Main.Forms
             // 
             // pnl_Pickup
             // 
-            this.pnl_Pickup.Controls.Add(this.btn_SavePickup);
+            this.pnl_Pickup.Controls.Add(this.btn_SaveDelivery);
             this.pnl_Pickup.Controls.Add(this.btn_CancelPickup);
             this.pnl_Pickup.Controls.Add(this.edt_release);
             this.pnl_Pickup.Controls.Add(this.btn_pickupDropbox);
@@ -143,15 +163,15 @@ namespace Main.Forms
             this.pnl_Pickup.Size = new System.Drawing.Size(218, 448);
             this.pnl_Pickup.TabIndex = 1;
             // 
-            // btn_SavePickup
+            // btn_SaveDelivery
             // 
-            this.btn_SavePickup.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_SavePickup.ImageOptions.Image")));
-            this.btn_SavePickup.Location = new System.Drawing.Point(28, 340);
-            this.btn_SavePickup.Name = "btn_SavePickup";
-            this.btn_SavePickup.Size = new System.Drawing.Size(168, 50);
-            this.btn_SavePickup.TabIndex = 25;
-            this.btn_SavePickup.Text = "Save";
-            this.btn_SavePickup.Click += new System.EventHandler(this.btn_SavePickup_Click);
+            this.btn_SaveDelivery.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_SaveDelivery.ImageOptions.Image")));
+            this.btn_SaveDelivery.Location = new System.Drawing.Point(28, 340);
+            this.btn_SaveDelivery.Name = "btn_SaveDelivery";
+            this.btn_SaveDelivery.Size = new System.Drawing.Size(168, 50);
+            this.btn_SaveDelivery.TabIndex = 25;
+            this.btn_SaveDelivery.Text = "Save";
+            this.btn_SaveDelivery.Click += new System.EventHandler(this.btn_SaveDelivery_Click);
             // 
             // btn_CancelPickup
             // 
@@ -182,6 +202,7 @@ namespace Main.Forms
             this.btn_pickupDropbox.Size = new System.Drawing.Size(168, 38);
             this.btn_pickupDropbox.TabIndex = 12;
             this.btn_pickupDropbox.Text = "Upload Pickup Photo";
+            this.btn_pickupDropbox.Click += new System.EventHandler(this.btn_pickupDropbox_Click);
             // 
             // lue_driver
             // 
@@ -190,11 +211,27 @@ namespace Main.Forms
             this.lue_driver.Name = "lue_driver";
             this.lue_driver.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lue_driver.Properties.DataSource = this.list_GrainLoadsDriversBindingSource;
             this.lue_driver.Properties.DisplayMember = "Driver";
             this.lue_driver.Properties.NullText = "Driver";
-            this.lue_driver.Properties.ValueMember = "IDDriver";
+            this.lue_driver.Properties.ValueMember = "ID_Driver";
             this.lue_driver.Size = new System.Drawing.Size(168, 20);
             this.lue_driver.TabIndex = 3;
+            // 
+            // list_GrainLoadsDriversBindingSource
+            // 
+            this.list_GrainLoadsDriversBindingSource.DataMember = "List_GrainLoadsDrivers";
+            this.list_GrainLoadsDriversBindingSource.DataSource = this.SDS_Drivers;
+            // 
+            // SDS_Drivers
+            // 
+            this.SDS_Drivers.ConnectionName = "_ITXLoadsTracking_Connection";
+            this.SDS_Drivers.Name = "SDS_Drivers";
+            storedProcQuery9.Name = "List_GrainLoadsDrivers";
+            storedProcQuery9.StoredProcName = "List_GrainLoadsDrivers";
+            this.SDS_Drivers.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
+            storedProcQuery9});
+            this.SDS_Drivers.ResultSchemaSerializable = resources.GetString("SDS_Drivers.ResultSchemaSerializable");
             // 
             // lue_GrainType
             // 
@@ -203,9 +240,27 @@ namespace Main.Forms
             this.lue_GrainType.Name = "lue_GrainType";
             this.lue_GrainType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lue_GrainType.Properties.DataSource = this.list_GrainLoadsGrainTypesBindingSource;
+            this.lue_GrainType.Properties.DisplayMember = "GrainType";
             this.lue_GrainType.Properties.NullText = "GrainType";
+            this.lue_GrainType.Properties.ValueMember = "ID_GrainType";
             this.lue_GrainType.Size = new System.Drawing.Size(168, 20);
             this.lue_GrainType.TabIndex = 8;
+            // 
+            // list_GrainLoadsGrainTypesBindingSource
+            // 
+            this.list_GrainLoadsGrainTypesBindingSource.DataMember = "List_GrainLoadsGrainTypes";
+            this.list_GrainLoadsGrainTypesBindingSource.DataSource = this.SDS_GrainType;
+            // 
+            // SDS_GrainType
+            // 
+            this.SDS_GrainType.ConnectionName = "_ITXLoadsTracking_Connection";
+            this.SDS_GrainType.Name = "SDS_GrainType";
+            storedProcQuery10.Name = "List_GrainLoadsGrainTypes";
+            storedProcQuery10.StoredProcName = "List_GrainLoadsGrainTypes";
+            this.SDS_GrainType.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
+            storedProcQuery10});
+            this.SDS_GrainType.ResultSchemaSerializable = resources.GetString("SDS_GrainType.ResultSchemaSerializable");
             // 
             // edt_pickupticket
             // 
@@ -250,22 +305,60 @@ namespace Main.Forms
             this.lue_locationPickup.Name = "lue_locationPickup";
             this.lue_locationPickup.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lue_locationPickup.Properties.DataSource = this.list_GlobalEntitiesBindingSource;
+            this.lue_locationPickup.Properties.DisplayMember = "Description";
             this.lue_locationPickup.Properties.NullText = "Pickup Location";
+            this.lue_locationPickup.Properties.ValueMember = "ID_Location";
             this.lue_locationPickup.Size = new System.Drawing.Size(168, 20);
             this.lue_locationPickup.TabIndex = 7;
+            // 
+            // list_GlobalEntitiesBindingSource
+            // 
+            this.list_GlobalEntitiesBindingSource.DataMember = "List_GlobalEntities";
+            this.list_GlobalEntitiesBindingSource.DataSource = this.SDS_PickupLocations;
+            // 
+            // SDS_PickupLocations
+            // 
+            this.SDS_PickupLocations.ConnectionName = "_ITXLoadsTracking_Connection";
+            this.SDS_PickupLocations.Name = "SDS_PickupLocations";
+            storedProcQuery11.Name = "List_GlobalEntities";
+            storedProcQuery11.StoredProcName = "List_GlobalLocations";
+            this.SDS_PickupLocations.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
+            storedProcQuery11});
+            this.SDS_PickupLocations.ResultSchemaSerializable = resources.GetString("SDS_PickupLocations.ResultSchemaSerializable");
             // 
             // lue_customer
             // 
             this.lue_customer.Enabled = false;
             this.lue_customer.Location = new System.Drawing.Point(28, 114);
             this.lue_customer.Name = "lue_customer";
+            this.lue_customer.Properties.AcceptEditorTextAsNewValue = DevExpress.Utils.DefaultBoolean.True;
             this.lue_customer.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lue_customer.Properties.DisplayMember = "Customer";
+            this.lue_customer.Properties.DataSource = this.list_GrainLoadsCustomersBindingSource;
+            this.lue_customer.Properties.DisplayMember = "CustomerName";
+            this.lue_customer.Properties.KeyMember = "(none";
             this.lue_customer.Properties.NullText = "Customer";
-            this.lue_customer.Properties.ValueMember = "IDCustomer";
+            this.lue_customer.Properties.ShowNullValuePrompt = ((DevExpress.XtraEditors.ShowNullValuePromptOptions)(((DevExpress.XtraEditors.ShowNullValuePromptOptions.EmptyValue | DevExpress.XtraEditors.ShowNullValuePromptOptions.EditorFocused) 
+            | DevExpress.XtraEditors.ShowNullValuePromptOptions.EditorReadOnly)));
+            this.lue_customer.Properties.ValueMember = "ID_GrainCustomer";
             this.lue_customer.Size = new System.Drawing.Size(168, 20);
             this.lue_customer.TabIndex = 5;
+            // 
+            // list_GrainLoadsCustomersBindingSource
+            // 
+            this.list_GrainLoadsCustomersBindingSource.DataMember = "List_GrainLoadsCustomers";
+            this.list_GrainLoadsCustomersBindingSource.DataSource = this.SDS_Customers;
+            // 
+            // SDS_Customers
+            // 
+            this.SDS_Customers.ConnectionName = "_ITXLoadsTracking_Connection";
+            this.SDS_Customers.Name = "SDS_Customers";
+            storedProcQuery12.Name = "List_GrainLoadsCustomers";
+            storedProcQuery12.StoredProcName = "List_GrainLoadsCustomers";
+            this.SDS_Customers.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
+            storedProcQuery12});
+            this.SDS_Customers.ResultSchemaSerializable = resources.GetString("SDS_Customers.ResultSchemaSerializable");
             // 
             // dte_Pickup
             // 
@@ -309,9 +402,9 @@ namespace Main.Forms
             this.splitContainerControl3.Panel1.Controls.Add(this.edt_netoDelivery);
             this.splitContainerControl3.Panel1.Controls.Add(this.edt_tareDelivery);
             this.splitContainerControl3.Panel1.Controls.Add(this.edt_grossDelivery);
-            this.splitContainerControl3.Panel1.Controls.Add(this.lookUpEdit1);
-            this.splitContainerControl3.Panel1.Controls.Add(this.textEdit8);
-            this.splitContainerControl3.Panel1.Controls.Add(this.dateEdit1);
+            this.splitContainerControl3.Panel1.Controls.Add(this.lue_deliveryLocation);
+            this.splitContainerControl3.Panel1.Controls.Add(this.edt_DeliveryTicket);
+            this.splitContainerControl3.Panel1.Controls.Add(this.dedt_DeliveryDate);
             this.splitContainerControl3.Panel1.Text = "Panel1";
             // 
             // splitContainerControl3.Panel2
@@ -396,6 +489,7 @@ namespace Main.Forms
             this.edt_netoDelivery.Properties.NullText = "Neto";
             this.edt_netoDelivery.Size = new System.Drawing.Size(176, 20);
             this.edt_netoDelivery.TabIndex = 19;
+            this.edt_netoDelivery.EditValueChanged += new System.EventHandler(this.edt_netoDelivery_EditValueChanged);
             // 
             // edt_tareDelivery
             // 
@@ -413,36 +507,44 @@ namespace Main.Forms
             this.edt_grossDelivery.Size = new System.Drawing.Size(176, 20);
             this.edt_grossDelivery.TabIndex = 17;
             // 
-            // lookUpEdit1
+            // lue_deliveryLocation
             // 
-            this.lookUpEdit1.Location = new System.Drawing.Point(23, 166);
-            this.lookUpEdit1.Name = "lookUpEdit1";
-            this.lookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.lue_deliveryLocation.Location = new System.Drawing.Point(23, 166);
+            this.lue_deliveryLocation.Name = "lue_deliveryLocation";
+            this.lue_deliveryLocation.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit1.Properties.NullText = "Delivery Location";
-            this.lookUpEdit1.Size = new System.Drawing.Size(176, 20);
-            this.lookUpEdit1.TabIndex = 16;
+            this.lue_deliveryLocation.Properties.DataSource = this.list_GlobalEntitiesBindingSource1;
+            this.lue_deliveryLocation.Properties.DisplayMember = "Description";
+            this.lue_deliveryLocation.Properties.NullText = "Delivery Location";
+            this.lue_deliveryLocation.Properties.ValueMember = "ID_Location";
+            this.lue_deliveryLocation.Size = new System.Drawing.Size(176, 20);
+            this.lue_deliveryLocation.TabIndex = 16;
             // 
-            // textEdit8
+            // list_GlobalEntitiesBindingSource1
             // 
-            this.textEdit8.Location = new System.Drawing.Point(23, 140);
-            this.textEdit8.Name = "textEdit8";
-            this.textEdit8.Properties.NullText = "Delivery Ticket";
-            this.textEdit8.Size = new System.Drawing.Size(176, 20);
-            this.textEdit8.TabIndex = 15;
+            this.list_GlobalEntitiesBindingSource1.DataMember = "List_GlobalEntities";
+            this.list_GlobalEntitiesBindingSource1.DataSource = this.SDS_PickupLocations;
             // 
-            // dateEdit1
+            // edt_DeliveryTicket
             // 
-            this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(23, 88);
-            this.dateEdit1.Name = "dateEdit1";
-            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.edt_DeliveryTicket.Location = new System.Drawing.Point(23, 140);
+            this.edt_DeliveryTicket.Name = "edt_DeliveryTicket";
+            this.edt_DeliveryTicket.Properties.NullText = "Delivery Ticket";
+            this.edt_DeliveryTicket.Size = new System.Drawing.Size(176, 20);
+            this.edt_DeliveryTicket.TabIndex = 15;
+            // 
+            // dedt_DeliveryDate
+            // 
+            this.dedt_DeliveryDate.EditValue = null;
+            this.dedt_DeliveryDate.Location = new System.Drawing.Point(23, 88);
+            this.dedt_DeliveryDate.Name = "dedt_DeliveryDate";
+            this.dedt_DeliveryDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dedt_DeliveryDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.NullText = "Delivery Date";
-            this.dateEdit1.Size = new System.Drawing.Size(176, 20);
-            this.dateEdit1.TabIndex = 14;
+            this.dedt_DeliveryDate.Properties.NullText = "Delivery Date";
+            this.dedt_DeliveryDate.Size = new System.Drawing.Size(176, 20);
+            this.dedt_DeliveryDate.TabIndex = 14;
             // 
             // pictureEdit2
             // 
@@ -461,6 +563,10 @@ namespace Main.Forms
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pictureEdit1.Size = new System.Drawing.Size(301, 225);
             this.pictureEdit1.TabIndex = 13;
+            // 
+            // splashScreenManager1
+            // 
+            this.splashScreenManager1.ClosingDelay = 500;
             // 
             // frm_DeliveryCapt
             // 
@@ -481,13 +587,17 @@ namespace Main.Forms
             this.pnl_Pickup.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.edt_release.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lue_driver.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.list_GrainLoadsDriversBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lue_GrainType.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.list_GrainLoadsGrainTypesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.edt_pickupticket.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.edt_netoPickup.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.edt_tarePickup.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.edt_grossPickup.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lue_locationPickup.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.list_GlobalEntitiesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lue_customer.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.list_GrainLoadsCustomersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dte_Pickup.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dte_Pickup.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.edt_factura.Properties)).EndInit();
@@ -503,10 +613,11 @@ namespace Main.Forms
             ((System.ComponentModel.ISupportInitialize)(this.edt_netoDelivery.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.edt_tareDelivery.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.edt_grossDelivery.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lue_deliveryLocation.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.list_GlobalEntitiesBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.edt_DeliveryTicket.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dedt_DeliveryDate.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dedt_DeliveryDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
@@ -517,9 +628,9 @@ namespace Main.Forms
 
         private DevExpress.XtraEditors.SplitContainerControl splitContainerControl1;
         private DevExpress.XtraEditors.SplitContainerControl splitContainerControl3;
-        private DevExpress.XtraEditors.DateEdit dateEdit1;
-        private DevExpress.XtraEditors.TextEdit textEdit8;
-        private DevExpress.XtraEditors.LookUpEdit lookUpEdit1;
+        private DevExpress.XtraEditors.DateEdit dedt_DeliveryDate;
+        private DevExpress.XtraEditors.TextEdit edt_DeliveryTicket;
+        private DevExpress.XtraEditors.LookUpEdit lue_deliveryLocation;
         private DevExpress.XtraEditors.TextEdit edt_grossDelivery;
         private DevExpress.XtraEditors.TextEdit edt_tareDelivery;
         private DevExpress.XtraEditors.TextEdit edt_netoDelivery;
@@ -538,7 +649,6 @@ namespace Main.Forms
         private DevExpress.XtraEditors.TextEdit edt_tarePickup;
         private DevExpress.XtraEditors.TextEdit edt_grossPickup;
         private DevExpress.XtraEditors.LookUpEdit lue_locationPickup;
-        private DevExpress.XtraEditors.LookUpEdit lue_customer;
         private DevExpress.XtraEditors.DateEdit dte_Pickup;
         private DevExpress.XtraEditors.TextEdit edt_factura;
         private DevExpress.XtraEditors.LabelControl lbl_type;
@@ -546,7 +656,18 @@ namespace Main.Forms
         private DevExpress.XtraEditors.LabelControl lbl_driver;
         private DevExpress.XtraEditors.LabelControl lbl_Factura;
         private DevExpress.XtraEditors.LabelControl lbl_release;
-        private DevExpress.XtraEditors.SimpleButton btn_SavePickup;
+        private DevExpress.XtraEditors.SimpleButton btn_SaveDelivery;
         private DevExpress.XtraEditors.SimpleButton btn_CancelPickup;
+        public DevExpress.XtraEditors.LookUpEdit lue_customer;
+        private DevExpress.DataAccess.Sql.SqlDataSource SDS_Customers;
+        private System.Windows.Forms.BindingSource list_GrainLoadsCustomersBindingSource;
+        private System.Windows.Forms.BindingSource list_GrainLoadsDriversBindingSource;
+        private DevExpress.DataAccess.Sql.SqlDataSource SDS_Drivers;
+        private System.Windows.Forms.BindingSource list_GlobalEntitiesBindingSource;
+        private DevExpress.DataAccess.Sql.SqlDataSource SDS_PickupLocations;
+        private System.Windows.Forms.BindingSource list_GrainLoadsGrainTypesBindingSource;
+        private DevExpress.DataAccess.Sql.SqlDataSource SDS_GrainType;
+        private System.Windows.Forms.BindingSource list_GlobalEntitiesBindingSource1;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
     }
 }

@@ -10,10 +10,15 @@ namespace Main.Classes
     {
         public Guid id_grainload { get; set; }
         public Guid id_customer { get; set; }
+        public string customer { get; set;}
         public Guid id_pickup_location { get; set; }
+        public string Description_Pickup_Location { get; set;}
         public Guid id_grainType { get; set; }
+        public string name_graintype { get; set; }
         public Guid id_driver { get; set; }
+        public string driverName { get; set; }
         public Guid id_who { get; set; }
+        public string who { get; set; }
         public DateTime regdate { get; set; }
         public string release { get; set; }
         public string factura { get; set; }

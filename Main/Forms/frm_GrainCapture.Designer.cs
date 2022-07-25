@@ -36,6 +36,7 @@ namespace Main
             DevExpress.DataAccess.Sql.QueryParameter queryParameter6 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Grain_Capture));
             DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery4 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::Main.Forms.WaitForm1), true, true);
             this.grc_GrainLoads = new DevExpress.XtraGrid.GridControl();
             this.SDS_GrainLoadsGRID = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.grv_Grainloads = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -83,7 +84,7 @@ namespace Main
             this.SDS_DateColumns = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_notes = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.list_GrainLoads_DateColumnsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -117,6 +118,10 @@ namespace Main
             ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).BeginInit();
             this.SuspendLayout();
             // 
+            // splashScreenManager1
+            // 
+            this.splashScreenManager1.ClosingDelay = 500;
+            // 
             // grc_GrainLoads
             // 
             this.grc_GrainLoads.DataMember = "List_GrainLoads";
@@ -127,10 +132,11 @@ namespace Main
             this.grc_GrainLoads.Name = "grc_GrainLoads";
             this.grc_GrainLoads.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit1});
-            this.grc_GrainLoads.Size = new System.Drawing.Size(1065, 234);
+            this.grc_GrainLoads.Size = new System.Drawing.Size(950, 447);
             this.grc_GrainLoads.TabIndex = 0;
             this.grc_GrainLoads.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grv_Grainloads});
+            this.grc_GrainLoads.Click += new System.EventHandler(this.grc_GrainLoads_Click);
             // 
             // SDS_GrainLoadsGRID
             // 
@@ -205,7 +211,7 @@ namespace Main
             this.DeleteColumn.Name = "DeleteColumn";
             this.DeleteColumn.Visible = true;
             this.DeleteColumn.VisibleIndex = 0;
-            this.DeleteColumn.Width = 41;
+            this.DeleteColumn.Width = 66;
             // 
             // repositoryItemButtonEdit1
             // 
@@ -223,7 +229,7 @@ namespace Main
             this.colStatus.Name = "colStatus";
             this.colStatus.Visible = true;
             this.colStatus.VisibleIndex = 1;
-            this.colStatus.Width = 47;
+            this.colStatus.Width = 56;
             // 
             // colRelease
             // 
@@ -231,7 +237,7 @@ namespace Main
             this.colRelease.Name = "colRelease";
             this.colRelease.Visible = true;
             this.colRelease.VisibleIndex = 2;
-            this.colRelease.Width = 47;
+            this.colRelease.Width = 50;
             // 
             // colFactura
             // 
@@ -239,7 +245,7 @@ namespace Main
             this.colFactura.Name = "colFactura";
             this.colFactura.Visible = true;
             this.colFactura.VisibleIndex = 3;
-            this.colFactura.Width = 47;
+            this.colFactura.Width = 46;
             // 
             // colPickup_Date
             // 
@@ -247,7 +253,7 @@ namespace Main
             this.colPickup_Date.Name = "colPickup_Date";
             this.colPickup_Date.Visible = true;
             this.colPickup_Date.VisibleIndex = 4;
-            this.colPickup_Date.Width = 47;
+            this.colPickup_Date.Width = 73;
             // 
             // colID_Customer
             // 
@@ -260,7 +266,7 @@ namespace Main
             this.colCustomerName.Name = "colCustomerName";
             this.colCustomerName.Visible = true;
             this.colCustomerName.VisibleIndex = 5;
-            this.colCustomerName.Width = 47;
+            this.colCustomerName.Width = 93;
             // 
             // colPickup_Ticket
             // 
@@ -268,7 +274,7 @@ namespace Main
             this.colPickup_Ticket.Name = "colPickup_Ticket";
             this.colPickup_Ticket.Visible = true;
             this.colPickup_Ticket.VisibleIndex = 6;
-            this.colPickup_Ticket.Width = 47;
+            this.colPickup_Ticket.Width = 83;
             // 
             // colID_Pickup_Location
             // 
@@ -281,7 +287,7 @@ namespace Main
             this.colPickupLocation.Name = "colPickupLocation";
             this.colPickupLocation.Visible = true;
             this.colPickupLocation.VisibleIndex = 7;
-            this.colPickupLocation.Width = 111;
+            this.colPickupLocation.Width = 35;
             // 
             // colGross_Pickup
             // 
@@ -289,7 +295,7 @@ namespace Main
             this.colGross_Pickup.Name = "colGross_Pickup";
             this.colGross_Pickup.Visible = true;
             this.colGross_Pickup.VisibleIndex = 8;
-            this.colGross_Pickup.Width = 43;
+            this.colGross_Pickup.Width = 35;
             // 
             // colTare_Pickup
             // 
@@ -297,7 +303,7 @@ namespace Main
             this.colTare_Pickup.Name = "colTare_Pickup";
             this.colTare_Pickup.Visible = true;
             this.colTare_Pickup.VisibleIndex = 9;
-            this.colTare_Pickup.Width = 85;
+            this.colTare_Pickup.Width = 35;
             // 
             // colNeto_Pickup
             // 
@@ -305,7 +311,7 @@ namespace Main
             this.colNeto_Pickup.Name = "colNeto_Pickup";
             this.colNeto_Pickup.Visible = true;
             this.colNeto_Pickup.VisibleIndex = 10;
-            this.colNeto_Pickup.Width = 40;
+            this.colNeto_Pickup.Width = 35;
             // 
             // colDelivery_Date
             // 
@@ -313,7 +319,7 @@ namespace Main
             this.colDelivery_Date.Name = "colDelivery_Date";
             this.colDelivery_Date.Visible = true;
             this.colDelivery_Date.VisibleIndex = 11;
-            this.colDelivery_Date.Width = 79;
+            this.colDelivery_Date.Width = 35;
             // 
             // colDelivery_Ticket
             // 
@@ -321,7 +327,7 @@ namespace Main
             this.colDelivery_Ticket.Name = "colDelivery_Ticket";
             this.colDelivery_Ticket.Visible = true;
             this.colDelivery_Ticket.VisibleIndex = 12;
-            this.colDelivery_Ticket.Width = 74;
+            this.colDelivery_Ticket.Width = 35;
             // 
             // colID_Delivery_Location
             // 
@@ -334,7 +340,7 @@ namespace Main
             this.colDeliveryLocation.Name = "colDeliveryLocation";
             this.colDeliveryLocation.Visible = true;
             this.colDeliveryLocation.VisibleIndex = 13;
-            this.colDeliveryLocation.Width = 32;
+            this.colDeliveryLocation.Width = 35;
             // 
             // colGross_Delivery
             // 
@@ -342,7 +348,7 @@ namespace Main
             this.colGross_Delivery.Name = "colGross_Delivery";
             this.colGross_Delivery.Visible = true;
             this.colGross_Delivery.VisibleIndex = 14;
-            this.colGross_Delivery.Width = 32;
+            this.colGross_Delivery.Width = 35;
             // 
             // colTare_Delivery
             // 
@@ -350,7 +356,7 @@ namespace Main
             this.colTare_Delivery.Name = "colTare_Delivery";
             this.colTare_Delivery.Visible = true;
             this.colTare_Delivery.VisibleIndex = 15;
-            this.colTare_Delivery.Width = 32;
+            this.colTare_Delivery.Width = 35;
             // 
             // colNeto_Delivery
             // 
@@ -358,7 +364,7 @@ namespace Main
             this.colNeto_Delivery.Name = "colNeto_Delivery";
             this.colNeto_Delivery.Visible = true;
             this.colNeto_Delivery.VisibleIndex = 16;
-            this.colNeto_Delivery.Width = 32;
+            this.colNeto_Delivery.Width = 35;
             // 
             // colWeight
             // 
@@ -366,7 +372,7 @@ namespace Main
             this.colWeight.Name = "colWeight";
             this.colWeight.Visible = true;
             this.colWeight.VisibleIndex = 17;
-            this.colWeight.Width = 32;
+            this.colWeight.Width = 35;
             // 
             // colID_GrainType
             // 
@@ -379,7 +385,7 @@ namespace Main
             this.colGrainType.Name = "colGrainType";
             this.colGrainType.Visible = true;
             this.colGrainType.VisibleIndex = 18;
-            this.colGrainType.Width = 32;
+            this.colGrainType.Width = 35;
             // 
             // colID_Driver
             // 
@@ -392,7 +398,7 @@ namespace Main
             this.colDriver.Name = "colDriver";
             this.colDriver.Visible = true;
             this.colDriver.VisibleIndex = 19;
-            this.colDriver.Width = 71;
+            this.colDriver.Width = 35;
             // 
             // colDriverNotes
             // 
@@ -400,7 +406,7 @@ namespace Main
             this.colDriverNotes.Name = "colDriverNotes";
             this.colDriverNotes.Visible = true;
             this.colDriverNotes.VisibleIndex = 20;
-            this.colDriverNotes.Width = 57;
+            this.colDriverNotes.Width = 35;
             // 
             // colTotalPrice
             // 
@@ -408,7 +414,7 @@ namespace Main
             this.colTotalPrice.Name = "colTotalPrice";
             this.colTotalPrice.Visible = true;
             this.colTotalPrice.VisibleIndex = 21;
-            this.colTotalPrice.Width = 20;
+            this.colTotalPrice.Width = 35;
             // 
             // colPeriod
             // 
@@ -416,7 +422,7 @@ namespace Main
             this.colPeriod.Name = "colPeriod";
             this.colPeriod.Visible = true;
             this.colPeriod.VisibleIndex = 22;
-            this.colPeriod.Width = 20;
+            this.colPeriod.Width = 35;
             // 
             // colNotes
             // 
@@ -424,7 +430,7 @@ namespace Main
             this.colNotes.Name = "colNotes";
             this.colNotes.Visible = true;
             this.colNotes.VisibleIndex = 23;
-            this.colNotes.Width = 76;
+            this.colNotes.Width = 88;
             // 
             // colID_GrainLoad
             // 
@@ -469,7 +475,7 @@ namespace Main
             this.splitContainerControl2.Panel1.Controls.Add(this.lue_dateFilter);
             this.splitContainerControl2.Panel1.Controls.Add(this.simpleButton1);
             this.splitContainerControl2.Panel1.Controls.Add(this.simpleButton3);
-            this.splitContainerControl2.Panel1.Controls.Add(this.simpleButton4);
+            this.splitContainerControl2.Panel1.Controls.Add(this.btn_notes);
             this.splitContainerControl2.Panel1.Controls.Add(this.simpleButton2);
             this.splitContainerControl2.Panel1.Text = "Panel1";
             // 
@@ -477,7 +483,7 @@ namespace Main
             // 
             this.splitContainerControl2.Panel2.Controls.Add(this.pictureEdit1);
             this.splitContainerControl2.Panel2.Text = "Panel2";
-            this.splitContainerControl2.Size = new System.Drawing.Size(1065, 126);
+            this.splitContainerControl2.Size = new System.Drawing.Size(950, 111);
             this.splitContainerControl2.SplitterPosition = 574;
             this.splitContainerControl2.TabIndex = 26;
             // 
@@ -558,16 +564,18 @@ namespace Main
             this.simpleButton3.Name = "simpleButton3";
             this.simpleButton3.Size = new System.Drawing.Size(130, 60);
             this.simpleButton3.TabIndex = 22;
-            this.simpleButton3.Text = "simpleButton3";
+            this.simpleButton3.Text = "Download";
+            this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
             // 
-            // simpleButton4
+            // btn_notes
             // 
-            this.simpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
-            this.simpleButton4.Location = new System.Drawing.Point(278, 33);
-            this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.Size = new System.Drawing.Size(130, 60);
-            this.simpleButton4.TabIndex = 25;
-            this.simpleButton4.Text = "Notes ";
+            this.btn_notes.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_notes.ImageOptions.Image")));
+            this.btn_notes.Location = new System.Drawing.Point(278, 33);
+            this.btn_notes.Name = "btn_notes";
+            this.btn_notes.Size = new System.Drawing.Size(130, 60);
+            this.btn_notes.TabIndex = 25;
+            this.btn_notes.Text = "Notes ";
+            this.btn_notes.Click += new System.EventHandler(this.btn_notes_Click);
             // 
             // simpleButton2
             // 
@@ -582,10 +590,11 @@ namespace Main
             // pictureEdit1
             // 
             this.pictureEdit1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureEdit1.EditValue = ((object)(resources.GetObject("pictureEdit1.EditValue")));
             this.pictureEdit1.Location = new System.Drawing.Point(0, 0);
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit1.Size = new System.Drawing.Size(485, 126);
+            this.pictureEdit1.Size = new System.Drawing.Size(370, 111);
             this.pictureEdit1.TabIndex = 14;
             // 
             // list_GrainLoads_DateColumnsBindingSource1
@@ -609,8 +618,8 @@ namespace Main
             // 
             this.splitContainerControl1.Panel2.Controls.Add(this.grc_GrainLoads);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(1065, 366);
-            this.splitContainerControl1.SplitterPosition = 126;
+            this.splitContainerControl1.Size = new System.Drawing.Size(950, 564);
+            this.splitContainerControl1.SplitterPosition = 111;
             this.splitContainerControl1.TabIndex = 1;
             // 
             // list_GrainLoads_DateColumnsBindingSource
@@ -622,10 +631,11 @@ namespace Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1065, 366);
+            this.ClientSize = new System.Drawing.Size(950, 564);
             this.Controls.Add(this.splitContainerControl1);
             this.Name = "Grain_Capture";
             this.Text = "Grain_Capture";
+            this.Load += new System.EventHandler(this.Grain_Capture_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grc_GrainLoads)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grv_Grainloads)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
@@ -667,7 +677,7 @@ namespace Main
         private DevExpress.DataAccess.Sql.SqlDataSource SDS_DateColumns;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
-        private DevExpress.XtraEditors.SimpleButton simpleButton4;
+        private DevExpress.XtraEditors.SimpleButton btn_notes;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraEditors.PictureEdit pictureEdit1;
         private DevExpress.XtraEditors.SplitContainerControl splitContainerControl1;
@@ -711,5 +721,6 @@ namespace Main
         private System.Windows.Forms.BindingSource list_GrainLoads_DateColumnsBindingSource1;
         private System.Windows.Forms.BindingSource list_GrainLoads_DateColumnsBindingSource2;
         private DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider dxValidationProvider1;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
     }
 }
